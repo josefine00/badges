@@ -1,8 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="nav-bar" id="nav">
+      <ul>
+        <li>
+          <a>
+            <router-link to="/">Hem</router-link>
+          </a>
+        </li>
+        <li>
+          <a>
+            <router-link to="/intresse">Intressemärken</router-link>
+          </a>
+        </li>
+        <li>
+          <a>
+            <router-link to="/bevis">Bevismärken</router-link>
+          </a>
+        </li>
+        <li>
+          <a>
+            <router-link to="/deltagande">Deltagandemärken</router-link>
+          </a>
+        </li>
+      </ul>
     </div>
     <router-view />
   </div>
@@ -14,19 +34,60 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(0, 54, 96);
+  background-color: #ececec;
+  line-height: 150%;
 }
 
-#nav {
-  padding: 30px;
+.nav-bar ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgb(0, 54, 96);
 }
 
-#nav a {
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 14px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(0, 29, 51);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+.badge p {
   font-weight: bold;
-  color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.img {
+  padding: 2.5em 2.5em 0.5em 2.5em;
+}
+
+.badgeinfo {
+  text-align: left;
+  padding: 2.5em;
 }
 </style>
