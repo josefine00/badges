@@ -22,6 +22,11 @@
             <router-link to="/deltagande">Deltagandemärken</router-link>
           </a>
         </li>
+        <li>
+          <a>
+            <router-link to="/patruller">Patruller</router-link>
+          </a>
+        </li>
       </ul>
     </div>
     <router-view />
@@ -64,7 +69,9 @@ li a {
 }
 
 li a:hover {
-  background-color: rgb(0, 29, 51);
+  background-color: rgb(0, 33, 58);
+  text-decoration: none;
+  color: white;
 }
 
 .gallery {

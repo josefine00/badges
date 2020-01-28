@@ -466,19 +466,6 @@ export default {
   name: "intresse",
 
   data() {
-    /*badges[
-      ({
-        src: "../assets/Intressemarken/Morker.jpg",
-        alt: "Mörker",
-        name: "Mörker"
-      },
-      {
-        src: "../assets/Intressemarken/Vatten.jpg",
-        alt: "Vatten",
-        name: "Vatten"
-      })
-    ];*/
-
     return {
       showBadge: false
     };

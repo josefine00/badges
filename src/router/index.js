@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Intresse from "../views/intresse.vue";
 import Bevis from "../views/bevis.vue";
 import Deltagande from "../views/deltagande.vue";
+import FormTable from "../views/form-table.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/deltagande",
     name: "deltagande",
     component: Deltagande
+  },
+  {
+    path: "/patruller",
+    name: "patruller",
+    component: FormTable
   }
 ];
 

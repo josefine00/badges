@@ -55,13 +55,32 @@
           >Gå till deltagandemärken</router-link
         >
       </div>
+      <div v-for="intresse in intresses" v-bind:key="intresse.id" class="badge">
+        <div>
+          <img :src="intresse.image" :alt="intresse.name" class="img" />
+          <h2>{{ intresse.name }}</h2>
+          <div v-show="showBadgeInfoIntresse">
+            <h3>{{ intresse.desc }}</h3>
+            <p><b>Målspår: </b>{{ intresse.malspar }}</p>
+            <p><b>Innehåll: </b>{{ intresse.innehall }}</p>
+            <p>{{ intresse.info }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "home"
+  name: "home",
+
+  data() {
+    return {
+      intresses: "../data/intresse.js",
+      showBadgeInfoIntresse: false
+    };
+  }
 };
 </script>
 
