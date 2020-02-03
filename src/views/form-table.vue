@@ -3,7 +3,7 @@
     <h1>Patruller</h1>
     <button
       @click="togglePatrolForm"
-      class="btn btn-primary"
+      class="btn btn-primary formButton"
       id="addPatrolButton"
     >
       Lägg till patrull
@@ -32,6 +32,7 @@
           <b-form-select
             id="patrolAge"
             v-model="formData.patrolAge"
+            placeholder="Välj patrullens åldersgrupp..."
             :options="[
               'Spårare',
               'Upptäckare',
@@ -46,14 +47,14 @@
           variant="success"
           class="formButton"
           id="formSubmit"
-          >Submit</b-button
+          >Spara</b-button
         >
         <b-button
           type="reset"
           variant="primary"
           class="formButton"
           id="formReset"
-          >Reset</b-button
+          >Återställ</b-button
         >
       </b-form>
     </section>
@@ -67,9 +68,11 @@ export default {
   name: "form-table",
   data() {
     return {
-      showPatrolForm: false,
-      patrolName: "",
-      patrolAge: null
+      formData: {
+        patrolName: "",
+        patrolAge: null
+      },
+      showPatrolForm: false
     };
   },
   methods: {
@@ -85,6 +88,7 @@ export default {
       };
       this.addPatrol(payload);
 
+      //Reset form after submit
       this.formData = {
         patrolName: "",
         patrolAge: null
@@ -93,3 +97,16 @@ export default {
   }
 };
 </script>
+
+<style>
+.formButton {
+  margin: 1rem;
+  background-color: rgb(0, 54, 96);
+  border-color: rgb(0, 54, 96);
+}
+
+.formButton:hover {
+  background-color: rgb(0, 33, 58);
+  border-color: rgb(0, 33, 58);
+}
+</style>

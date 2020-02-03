@@ -56,30 +56,36 @@
         >
       </div>
       <div v-for="intresse in intresses" v-bind:key="intresse.id" class="badge">
-        <div>
-          <img :src="intresse.image" :alt="intresse.name" class="img" />
-          <h2>{{ intresse.name }}</h2>
-          <div v-show="showBadgeInfoIntresse">
-            <h3>{{ intresse.desc }}</h3>
-            <p><b>Målspår: </b>{{ intresse.malspar }}</p>
-            <p><b>Innehåll: </b>{{ intresse.innehall }}</p>
-            <p>{{ intresse.info }}</p>
-          </div>
+        <img :src="intresse.image" :alt="intresse.name" class="img" />
+        <h2>{{ intresse.name }}</h2>
+        <div v-show="showBadgeInfoIntresse" class="badgeinfo">
+          <h3>{{ intresse.desc }}</h3>
+          <p><b>Målspår: </b>{{ intresse.malspar }}</p>
+          <p><b>Innehåll: </b>{{ intresse.innehall }}</p>
+          <p>{{ intresse.info }}</p>
         </div>
       </div>
+      <span v-if="this.state">{{ checkState() }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import intresses from "../data/intresse.js";
 export default {
   name: "home",
 
   data() {
     return {
-      intresses: "../data/intresse.js",
-      showBadgeInfoIntresse: false
+      intresses: intresses,
+      showBadgeInfoIntresse: true,
+      state: this.state
     };
+  },
+  methods: {
+    checkState() {
+      console.log("Patruller: ", this.state.patrols);
+    }
   }
 };
 </script>

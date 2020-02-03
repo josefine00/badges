@@ -1,8 +1,8 @@
-export default [
+const intresses = [
   {
     name: "Internationellt Lära",
     id: "int-lara",
-    image: "../assets/Intressemarken/Internationellt-lara.jpg",
+    image: "/assets/Intressemarken/Internationellt-lara.jpg",
     desc:
       "Scouting är en global rörelse med ca 40 miljoner medlemmar i över 160 länder. Internationellt: Lära handlar om att lära sig mer om scouting i ett annat land och det landets kultur. Att lära sig mer och träffas över gränserna är en viktig del av scouting. På så sätt bidrar vi till fred och förståelse mellan folk och länder.",
     malspar:
@@ -512,3 +512,5 @@ export default [
     info: null
   }
 ];
+
+export default intresses;

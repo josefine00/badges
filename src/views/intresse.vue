@@ -47,6 +47,13 @@
         <img class="img" src="../assets/Intressemarken/Hitta.jpg" alt="Hitta" />
         <p>Hitta</p>
       </div>
+      <div
+        class="badge upptackare aventyrare utmanare rover"
+        @click="toggleBadge"
+      >
+        <img class="img" src="../assets/Intressemarken/Finna.jpg" alt="Finna" />
+        <p>Finna</p>
+      </div>
 
       <section
         @submit.prevent="handleSubmit"
@@ -88,13 +95,6 @@
         </p>
       </section>
 
-      <div
-        class="badge upptackare aventyrare utmanare rover"
-        @click="toggleBadge"
-      >
-        <img class="img" src="../assets/Intressemarken/Finna.jpg" alt="Finna" />
-        <p>Finna</p>
-      </div>
       <div
         class="badge sparare upptackare aventyrare utmanare rover"
         @click="toggleBadge"

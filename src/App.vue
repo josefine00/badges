@@ -45,8 +45,6 @@
 }
 
 .nav-bar ul {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   width: 100%;
   list-style-type: none;
@@ -87,6 +85,7 @@ li a:hover {
 
 .badge p {
   font-weight: bold;
+  font-size: 1.4em;
 }
 
 .img {

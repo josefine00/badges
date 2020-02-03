@@ -294,11 +294,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .deltagande img {
-  width: 150px;
-  height: 150px;
+  width: 225px;
+  height: auto;
 }
+
 .deltagande-gallery {
   display: flex;
   justify-content: center;
