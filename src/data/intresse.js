@@ -15,7 +15,7 @@ const intresses = [
   {
     name: "Internationellt Lyssna",
     id: "int-lyssna",
-    image: "../assets/Intressemarken/Internationellt-lyssna.jpg",
+    image: "/assets/Intressemarken/Internationellt-lyssna.jpg",
     desc:
       "Scouting är en global rörelse med ca 40 miljoner medlemmar i över 160 länder. Internationellt: Lyssna handlar om att ha kontakt med scouter i ett annat land. Att träffas över gränserna är en viktig del av scouting. På så sätt bidrar vi till fred och förståelse mellan folk och länder. Som scout har du alltså fantastiska möjligheter att lära känna nya vänner från andra länder.",
     malspar:
@@ -28,7 +28,7 @@ const intresses = [
   {
     name: "Internationellt Möta",
     id: "int-mota",
-    image: "../assets/Intressemarken/Internationellt-mota.jpg",
+    image: "/assets/Intressemarken/Internationellt-mota.jpg",
     desc:
       "Scouting är en global rörelse med ca 40 miljoner medlemmar i över 160 länder. Internationellt: Möta handlar om att träffa scouter från ett annat land. Att träffas över gränserna är en viktig del av scouting. På så sätt bidrar vi till fred och förståelse mellan folk och länder. Som scout har du alltså fantastiska möjligheter att lära känna nya vänner från andra länder.",
     malspar:
@@ -40,7 +40,7 @@ const intresses = [
   {
     name: "Klura",
     id: "klura",
-    image: "../assets/Intressemarken/Klura.jpg",
+    image: "/assets/Intressemarken/Klura.jpg",
     desc:
       "Att prova på att lösa kluriga gåtor, chiffer och lösa problem är en utmaning för de flesta som inte bara är roligt utan kan göra att du kan ha kontakt med någon utan att andra förstår vad ni pratar, skriver eller ritar om.",
     malspar: "Fantasi och kreativt uttryck, problemlösning, relationer.",
@@ -51,7 +51,7 @@ const intresses = [
   {
     name: "Hitta",
     id: "hitta",
-    image: "../assets/Intressemarken/Hitta.jpg",
+    image: "/assets/Intressemarken/Hitta.jpg",
     desc:
       "För att du som scout ska kunna ta eget ansvar och ge dig ut på olika äventyr är det viktigt att du kan känna dig säker i en ny miljö och hitta dit du ska.",
     malspar:
@@ -63,7 +63,7 @@ const intresses = [
   {
     name: "Finna",
     id: "finna",
-    image: "../assets/Intressemarken/Finna.jpg",
+    image: "/assets/Intressemarken/Finna.jpg",
     desc:
       "För att våga ge sig ut på äventyr gäller det att hitta dit man ska och kunna orientera sig. Intressemärken finna är en fortsättning på intressemärket Hitta och du får kunskap i verktyg och metoder för att klara sig själv.",
     malspar:
@@ -75,7 +75,7 @@ const intresses = [
   {
     name: "Tända",
     id: "tanda",
-    image: "../assets/Intressemarken/Tanda.jpg",
+    image: "/assets/Intressemarken/Tanda.jpg",
     desc:
       "För att få värme, kunna laga mat och skapa en mysig stämning är det bra att veta hur man enkelt och säkert gör upp och underhåller en eld. Genom att jobba med intressemärket Tända övar du på grunderna för att elda.",
     malspar: "Problemlösning, känsla för naturen, aktiv i gruppen.",
@@ -86,7 +86,7 @@ const intresses = [
   {
     name: "Brinna",
     id: "brinna",
-    image: "../assets/Intressemarken/Brinna.jpg",
+    image: "/assets/Intressemarken/Brinna.jpg",
     desc:
       "Det här är en fortsättning på intressemärket Tända. Genom att jobba med Brinna lär du dig mer om elden och hur man kan använda den på ett bra sätt. Eld som kan användas till att laga mat på, skapa en mysig stämning eller ge värme.",
     malspar: "Problemlösning, känsla för naturen, aktiv i gruppen.",
@@ -98,7 +98,7 @@ const intresses = [
   {
     name: "Elda",
     id: "elda",
-    image: "../assets/Intressemarken/Elda.jpg",
+    image: "/assets/Intressemarken/Elda.jpg",
     desc:
       "Elda är en fortsättning på intressemärket Brinna. Aktiviteter kopplade till det här märket ger scouterna en möjlighet att lära sig få igång och underhålla en eld under längre tid för att kunna laga mat, få värme och skapa stämning på ett säkert sätt.",
     malspar: "Problemlösning, känsla för naturen, aktiv i gruppen.",
@@ -110,7 +110,7 @@ const intresses = [
   {
     name: "Matettan",
     id: "matettan",
-    image: "../assets/Intressemarken/Matettan.jpg",
+    image: "/assets/Intressemarken/Matettan.jpg",
     desc:
       "Äta bör man, annars dör man. Men mat är inte bara en nödvändighet, det är också ett spännande och roligt hantverk, fullt av möjligheter. Här är chansen att lära sig laga enklare mat och kunna klara sig själv.",
     malspar:
@@ -122,7 +122,7 @@ const intresses = [
   {
     name: "Mattvåan",
     id: "mattvaan",
-    image: "../assets/Intressemarken/Mattvaan.jpg",
+    image: "/assets/Intressemarken/Mattvaan.jpg",
     desc:
       "Det här märket är en fortsättning av Matettan. Du får öva dig mer i att planera för matlagningen, tillreda mer avancerad mat på olika sätt. Mat är inte bara en nödvändighet för att vi ska överleva, det är också ett spännande och roligt hantverk.",
     malspar:
@@ -134,7 +134,7 @@ const intresses = [
   {
     name: "Mattrean",
     id: "mattrean",
-    image: "../assets/Intressemarken/Mattrean.jpg",
+    image: "/assets/Intressemarken/Mattrean.jpg",
     desc:
       "Mattrean är en fortsättning på Mattvåan och du får ännu bättre koll på vad vi äter egentligen och utveckla dig än mer i mathantverket. Ta chansen att bli en duktig kock och imponera på dig själv och dina vänner med god, fantasifull och nyttig mat.",
     malspar:
@@ -146,7 +146,7 @@ const intresses = [
   {
     name: "Goda gärningar",
     id: "goda-garningar",
-    image: "../assets/Intressemarken/Goda-garningar.jpg",
+    image: "/assets/Intressemarken/Goda-garningar.jpg",
     desc:
       "Scouter kämpar för en bättre värld. Att tänka på andra, vara vänlig och hjälpsam kan verka självklart men ibland behöver vi hjälp att komma ihåg det och träna på att se vad vi kan göra för andra.",
     malspar:
@@ -158,7 +158,7 @@ const intresses = [
   {
     name: "Världsförbättraren",
     id: "varldsforbattraren",
-    image: "../assets/Intressemarken/Varldsforbattraren.jpg",
+    image: "/assets/Intressemarken/Varldsforbattraren.jpg",
     desc:
       "Scouter är engagerade och vi bryr oss om hur samhället ser ut. Intressemärket Världsförbättrare handlar om att göra något för andra och göra något som påverkar samhället. Att jobba med aktiviteter för det här märket handlar inte bara om en insats för din omvärld, din insats kan också ge dig nya insikter om dig själv och nya perspektiv på livet.",
     malspar:
@@ -170,7 +170,7 @@ const intresses = [
   {
     name: "Spela",
     id: "spela",
-    image: "../assets/Intressemarken/Spela.jpg",
+    image: "/assets/Intressemarken/Spela.jpg",
     desc:
       "Genom att spela teater tränar du dig på många saker, som att uttrycka dig, att visa känslor och att våga ta plats. Det kräver både förberedelser och mod. Att sätta upp en teaterföreställning tillsammans kan också vara ett jättebra sätt för er i gruppen att lära känna varandra bättre och att bli bättre på att samarbeta. Om ni bjuder in en stor publik kan det dessutom vara ett sätt att få in lite extra pengar till er verksamhet eller till ett välgörande ändamål.",
     malspar:
@@ -182,7 +182,7 @@ const intresses = [
   {
     name: "Filma",
     id: "filma",
-    image: "../assets/Intressemarken/Filma.jpg",
+    image: "/assets/Intressemarken/Filma.jpg",
     desc:
       "Att spela in en film är ett roligt projekt med många sidor. Här kan du få chansen att utmana dig själv som skådespelare, lära dig mer om teknik, vara kreativ och konstnärlig, träna på att leda dina kamrater med mera. Blir filmen bra finns det gott om amatörfilmstävlingar att skicka in den till. Kanske är den här filmen början på en lång filmkarriär?",
     malspar:
@@ -194,7 +194,7 @@ const intresses = [
   {
     name: "Skapa",
     id: "skapa",
-    image: "../assets/Intressemarken/Skapa.jpg",
+    image: "/assets/Intressemarken/Skapa.jpg",
     desc:
       "Att skapa något kreativt med sina egna händer är både en rolig utmaning och ett skönt sätt att koppla bort allt annat för en stund.",
     malspar:
@@ -206,7 +206,7 @@ const intresses = [
   {
     name: "Fixa",
     id: "fixa",
-    image: "../assets/Intressemarken/Fixa.jpg",
+    image: "/assets/Intressemarken/Fixa.jpg",
     desc:
       "Många platser kan bli mysigare, snyggare, roligare och trevligare genom lite fix och piff. Genom att jobba med aktiviteter för det här märket gör ni om något i miljön ni är i ofta. Samtidigt får du och dina scoutkompisar en utmaning i att verkligheten nå ert mål med projektet och skapa något själva. Kanske är det dags att scoutlokalen blir precis så som ni vill ha den?",
     malspar: "Fantasi och kreativt uttryck, problemlösning, kritiskt tänkande.",
@@ -217,7 +217,7 @@ const intresses = [
   {
     name: "Första repmärket",
     id: "forsta-rep",
-    image: "../assets/Intressemarken/Forsta-rep.jpg",
+    image: "/assets/Intressemarken/Forsta-rep.jpg",
     desc:
       "Rep går att använda till en massa bra saker, framför allt när du är ute i naturen men också i helt andra situationer. Genom att jobba med repmärket lär du dig att lösa olika problem med hjälp av rep och knopar.",
     malspar:
@@ -229,7 +229,7 @@ const intresses = [
   {
     name: "Andra repmärket",
     id: "andra-rep",
-    image: "../assets/Intressemarken/Andra-rep.jpg",
+    image: "/assets/Intressemarken/Andra-rep.jpg",
     desc:
       "Andra repmärket bygger vidare på Första repmärket. Genom att jobba med Andra repmärket övar du dig i att lösa problem och hur du kan få nytta av rep till olika äventyr.",
     malspar:
@@ -241,7 +241,7 @@ const intresses = [
   {
     name: "Då och nu",
     id: "da-och-nu",
-    image: "../assets/Intressemarken/Da-och-nu.jpg",
+    image: "/assets/Intressemarken/Da-och-nu.jpg",
     desc:
       "Genom att känna till scoutrörelsens historia och hur den har utvecklats ökar du din förståelse för varför vi gör vissa saker och varför vi till exempel ser ut som vi gör. Scoutrörelsen startade för mer än 100 år sedan i Storbritannien och är idag den största världsomspännande idéburna barn- och ungdomsrörelsen i världen.",
     malspar:
@@ -253,7 +253,7 @@ const intresses = [
   {
     name: "Livsåskådning",
     id: "livsaskadning",
-    image: "../assets/Intressemarken/Livsaskadning.jpg",
+    image: "/assets/Intressemarken/Livsaskadning.jpg",
     desc:
       "Världen är stor och det är inte lätt att veta vad man vill, var allt kommer ifrån eller ur man ska leva sitt liv. I Scouterna utmanas du att våga tänka stora tankar om livet.",
     malspar: "Egna värderingar, existens, förståelse för omvärlden.",
@@ -265,7 +265,7 @@ const intresses = [
   {
     name: "Blogga",
     id: "blogga",
-    image: "../assets/Intressemarken/Blogga.jpg",
+    image: "/assets/Intressemarken/Blogga.jpg",
     desc:
       "Att dokumentera vad ni gjort tillsammans gör det lätt att komma ihåg roliga händelser och allt man är med om. Samtidigt kan det vara ett perfekt tillfälle att visa och berätta för andra vad ni gör på Scouterna.",
     malspar:
@@ -277,7 +277,7 @@ const intresses = [
   {
     name: "Chatta",
     id: "chatta",
-    image: "../assets/Intressemarken/Chatta.jpg",
+    image: "/assets/Intressemarken/Chatta.jpg",
     desc:
       "Det finns runt 40 miljoner scouter i världen, men hur många har du haft kontakt med egentligen. Många av dem finns på internet så passa på att lära känna några av dem och få reda på vad de gör och vad de tycker är viktigt i Scouterna.",
     malspar:
@@ -290,7 +290,7 @@ const intresses = [
   {
     name: "Vara ute vinter",
     id: "vara-ute-vinter",
-    image: "../assets/Intressemarken/Ute-vinter.jpg",
+    image: "/assets/Intressemarken/Ute-vinter.jpg",
     desc:
       "Att vara ute i naturen på hajk eller läger kan innebära stora utmaningar och ställer bland annat krav på planering, eget ansvar och samarbete. Vad det innebär att vara ute skiljer sig åt mellan årstider och platser . Intressemärkena Vara ute finns i fem varianter beroende på miljö, välj att jobba med ett av dem eller allihop (men ett i taget).",
     malspar:
@@ -302,7 +302,7 @@ const intresses = [
   {
     name: "Vara ute vatten",
     id: "vara-ute-vatten",
-    image: "../assets/Intressemarken/Ute-vatten.jpg",
+    image: "/assets/Intressemarken/Ute-vatten.jpg",
     desc:
       "Att vara ute i naturen på hajk eller läger kan innebära stora utmaningar och ställer bland annat krav på planering, eget ansvar och samarbete. Vad det innebär att vara ute skiljer sig åt mellan årstider och platser . Intressemärkena Vara ute finns i fem varianter beroende på miljö, välj att jobba med ett av dem eller allihop (men ett i taget).",
     malspar:
@@ -314,7 +314,7 @@ const intresses = [
   {
     name: "Vara ute staden",
     id: "vara-ute-staden",
-    image: "../assets/Intressemarken/Ute-staden.jpg",
+    image: "/assets/Intressemarken/Ute-staden.jpg",
     desc:
       "Att vara ute i naturen på hajk eller läger kan innebära stora utmaningar och ställer bland annat krav på planering, eget ansvar och samarbete. Vad det innebär att vara ute skiljer sig åt mellan årstider och platser . Intressemärkena Vara ute finns i fem varianter beroende på miljö, välj att jobba med ett av dem eller allihop (men ett i taget).",
     malspar:
@@ -326,7 +326,7 @@ const intresses = [
   {
     name: "Vara ute skogen",
     id: "vara-ute-skogen",
-    image: "../assets/Intressemarken/Ute-skogen.jpg",
+    image: "/assets/Intressemarken/Ute-skogen.jpg",
     desc:
       "Att vara ute i naturen på hajk eller läger kan innebära stora utmaningar och ställer bland annat krav på planering, eget ansvar och samarbete. Vad det innebär att vara ute skiljer sig åt mellan årstider och platser . Intressemärkena Vara ute finns i fem varianter beroende på miljö, välj att jobba med ett av dem eller allihop (men ett i taget).",
     malspar:
@@ -338,7 +338,7 @@ const intresses = [
   {
     name: "Vara ute fjället",
     id: "vara-ute-fjallet",
-    image: "../assets/Intressemarken/Ute-fjallet.jpg",
+    image: "/assets/Intressemarken/Ute-fjallet.jpg",
     desc:
       "Att vara ute i naturen på hajk eller läger kan innebära stora utmaningar och ställer bland annat krav på planering, eget ansvar och samarbete. Vad det innebär att vara ute skiljer sig åt mellan årstider och platser . Intressemärkena Vara ute finns i fem varianter beroende på miljö, välj att jobba med ett av dem eller allihop (men ett i taget).",
     malspar:
@@ -350,7 +350,7 @@ const intresses = [
   {
     name: "Plåstra",
     id: "plastra",
-    image: "../assets/Intressemarken/Plastra.jpg",
+    image: "/assets/Intressemarken/Plastra.jpg",
     desc:
       "En förutsättning för att du som scout ska kunna ta eget ansvar och ge dig ut på olika äventyr är att du kan hantera skador och olyckssituationer som kan uppstå. Det är viktigt att du vet vad man ska göra om någon skadar sig och det är skönt att veta att dina kompisar vet vad de ska göra om du skadar dig.",
     malspar:
@@ -362,7 +362,7 @@ const intresses = [
   {
     name: "Hjälpa",
     id: "hjalpa",
-    image: "../assets/Intressemarken/Hjalpa.jpg",
+    image: "/assets/Intressemarken/Hjalpa.jpg",
     desc:
       "Hjälpa är en fortsättning på intressemärket Plåstra. Genom att jobba med Hjälpa lär du dig mer om hur du kan hjälpa någon som har skadat sig, vad man behöver ha med sig och hur du kan undvika att någon skadar sig. För att våga ge sig ut på okända äventyr är det bra att vara redo och kunna hantera skador och olyckssituationer som kan uppstå.",
     malspar:
@@ -375,7 +375,7 @@ const intresses = [
   {
     name: "Rädda",
     id: "radda",
-    image: "../assets/Intressemarken/Radda.jpg",
+    image: "/assets/Intressemarken/Radda.jpg",
     desc:
       "Rädda är en fortsättning på intressemärket Hjälpa. Aktiviteterna och kunskapen i att ta hand om någon som råkat illa ut blir mer avancerat och efter att ha jobbat med märket överblickar scouten enkelt en olycka och vågar agera.",
     malspar:
@@ -388,7 +388,7 @@ const intresses = [
   {
     name: "Rekrytera",
     id: "rekrytera",
-    image: "../assets/Intressemarken/Rekrytera.jpg",
+    image: "/assets/Intressemarken/Rekrytera.jpg",
     desc:
       "Att vara scout är så klart det roligaste och bästa som finns. Det vet vi som är med, men visst är det synd att det finns så många som aldrig fått chansen att börja på scouterna och som inte vet hur kul det är? Genom att rekrytera fler kompisar blir det dessutom ännu roligare för oss som redan är med.",
     malspar: "Relationer, aktiv i samhället, egna värderingar.",
@@ -399,7 +399,7 @@ const intresses = [
   {
     name: "Miljö - Sortera",
     id: "miljo-sortera",
-    image: "../assets/Intressemarken/Sortera.jpg",
+    image: "/assets/Intressemarken/Sortera.jpg",
     desc:
       "Vi har bara en jord och vi människor kan påverka hur vi tar hand om den för att alla ska trivas och för att den ska hålla så länge som möjligt. Scouter bryr sig och det här märket handlar om att lära sig mer om hur vi påverkar vår miljö och vad vi kan göra åt det.",
     malspar: "Aktiv i samhället, känsla för naturen, egna värderingar",
@@ -411,7 +411,7 @@ const intresses = [
   {
     name: "Miljö - Återvinn",
     id: "miljo-atervinn",
-    image: "../assets/Intressemarken/Atervinn.jpg",
+    image: "/assets/Intressemarken/Atervinn.jpg",
     desc:
       "Miljö: Återvinn är en fortsättning på intressemärket Miljö Sortera. Vi har bara en jord och vi människor kan påverka hur vi tar hand om den för att alla ska trivas och för att den ska hålla så länge som möjligt. Scouter bryr sig och det här märket handlar om att lära sig mer om hur vi påverkar vår miljö och vad vi kan göra åt det.",
     malspar: "Aktiv i samhället, känsla för naturen, egna värderingar.",
@@ -423,7 +423,7 @@ const intresses = [
   {
     name: "Demokrati",
     id: "demokrati",
-    image: "../assets/Intressemarken/Demokrati.jpg",
+    image: "/assets/Intressemarken/Demokrati.jpg",
     desc:
       "Demokrati handlar bland annat om att allas åsikter är lika mycket värda och att alla har samma möjlighet att påverka gemensamma beslut. För att en demokrati ska fungera är det viktigt att vi har bra och tydliga metoder för att bestämma saker tillsammans. Hur fungerar demokratin i din patrull och i din scoutkår?",
     malspar:
@@ -435,7 +435,7 @@ const intresses = [
   {
     name: "Bygga",
     id: "bygga",
-    image: "../assets/Intressemarken/Bygga.jpg",
+    image: "/assets/Intressemarken/Bygga.jpg",
     desc:
       "Att bygga något stort och användbart är en härlig utmaning. Det är ett bra sätt att träna på att planera och komma på smarta lösningar. På köpet kommer ju dessutom nyttan av det ni bygger.",
     malspar:
@@ -447,7 +447,7 @@ const intresses = [
   {
     name: "Naturligt",
     id: "naturligt",
-    image: "../assets/Intressemarken/Naturligt.jpg",
+    image: "/assets/Intressemarken/Naturligt.jpg",
     desc:
       "Vi är ofta ute i Scouterna, genom att känna till mer om naturen, vad vi får och kan göra blir det också enklare och roligare att vara utomhus. Det här är märket för dig som vill känna dig som hemma i naturen.",
     malspar:
@@ -459,7 +459,7 @@ const intresses = [
   {
     name: "Väder",
     id: "vader",
-    image: "../assets/Intressemarken/Vader.jpg",
+    image: "/assets/Intressemarken/Vader.jpg",
     desc:
       "Genom att arbeta med intressemärket väder lär du dig mer om hur olika väderförhållanden påverkar upplevelsen av att vara ute i naturen. Kläder efter väder kanske du tänker och funderar sedan inte mer över det. Men hur mycket vet du egentligen om väder? Och hur ska du egentligen bete dig för att få en positiv upplevelse av din utevistelse trots hagel, snålblåst eller gassande sol?",
     malspar: null,
@@ -470,7 +470,7 @@ const intresses = [
   {
     name: "Paddla",
     id: "paddla",
-    image: "../assets/Intressemarken/Paddla.jpg",
+    image: "/assets/Intressemarken/Paddla.jpg",
     desc:
       "Att paddla är ett enkelt och smidigt sätt att ta sig ut på vatten. Paddling kan ske både på djupt och grunt vatten och med hjälp av en kanot eller kajak kan du i princip ta dig fram på alla sorters vatten. Genom att arbeta med intressemärket Paddla får du lära dig paddlingens grunder.",
     malspar: null,
@@ -481,7 +481,7 @@ const intresses = [
   {
     name: "Under ytan",
     id: "under-ytan",
-    image: "../assets/Intressemarken/Under-ytan.jpg",
+    image: "/assets/Intressemarken/Under-ytan.jpg",
     desc:
       "Genom att jobba med Under ytan bör du lära dig om vad vatten är och hur vatten fungerar. Du undersöker livet under vattenytan och allt som hör därtill. Du undersöker också vattnets växt- och djurliv och lär dig om förutsättningar för liv i vatten.",
     malspar: null,
@@ -492,7 +492,7 @@ const intresses = [
   {
     name: "Vatten",
     id: "vatten",
-    image: "../assets/Intressemarken/Vatten.jpg",
+    image: "/assets/Intressemarken/Vatten.jpg",
     desc:
       "Intressemärket Vatten fördjupar förståelsen för vatten och dess påverkan. Vatten finns över hela vårt jordklot. Genom att arbeta med detta intressemärket får du förståelse för hur vatten påverkar människors livsmöjligheter. Du får utforska vatten som förutsättning för liv och hur vatten påverkar oss människor på olika sätt.",
     malspar: null,
@@ -503,7 +503,7 @@ const intresses = [
   {
     name: "Mörker",
     id: "morker",
-    image: "../assets/Intressemarken/Morker.jpg",
+    image: "/assets/Intressemarken/Morker.jpg",
     desc:
       "Mörker kan vara både spännande och skrämmande. Mörker är dessutom en naturlig del av scouting till exempel under läger, hajker eller veckomötena under vinterhalvåret. Mörkermärket vill få scouter att känna sig trygga i mörkret samt lära sig grundläggande säkerhet i mörker.",
     malspar: null,

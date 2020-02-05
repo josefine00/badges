@@ -83,6 +83,11 @@ li a:hover {
   background-color: #ffffff;
 }
 
+.badge {
+  white-space: pre-line;
+  width: 25%;
+}
+
 .badge p {
   font-weight: bold;
   font-size: 1.4em;
@@ -95,5 +100,9 @@ li a:hover {
 .badgeinfo {
   text-align: left;
   padding: 2.5em;
+}
+
+h1 {
+  padding: 1rem;
 }
 </style>

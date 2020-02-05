@@ -1,4 +1,4 @@
-export default [
+const beviss = [
   {
     name: "Kniv",
     id: "kniv",
@@ -33,3 +33,5 @@ export default [
       "Badreglerna som finns listade är exempel på viktiga förhållningsregler. Fyll gärna på eller justera för att passa er verksamhet på bästa sätt. Behöver du tips på bra aktiviteter kolla på www.aktivitetsbanken.se, prata med ledarvänner eller fråga vad scouterna vill hitta på för att uppnå målet med att lära sig allt om simning."
   }
 ];
+
+export default beviss;

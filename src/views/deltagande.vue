@@ -3,284 +3,89 @@
     <h1>Deltagandemärken</h1>
     <div class="deltagande gallery">
       <div class="sparare">
-        <h2>Spårarscout</h2>
+        <h2>Spårare</h2>
         <div class="deltagande-gallery">
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Fotspar.jpg"
-              alt="Fotspår"
-            />
-            <p>Fotspår</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Ljusspar.jpg"
-              alt="Ljusspår"
-            />
-            <p>Ljusspår</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Djurspar.jpg"
-              alt="Djurspår"
-            />
-            <p>Djurspår</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Tidspar.jpg"
-              alt="Tidspår"
-            />
-            <p>Tidspår</p>
+          <div
+            v-for="deltagande in deltagandeSparare"
+            v-bind:key="deltagande.id"
+            class="badge"
+          >
+            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
+            <p>{{ deltagande.name }}</p>
+            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+              <h4>{{ deltagande.desc }}</h4>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="upptackare">
-        <h2>Upptäckarscout</h2>
+        <h2>Upptäckare</h2>
         <div class="deltagande-gallery">
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Horisonten.jpg"
-              alt="Horisonten"
-            />
-            <p>Horisonten</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Manniskan.jpg"
-              alt="Människan"
-            />
-            <p>Människan</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Vagen.jpg"
-              alt="Vägen"
-            />
-            <p>Vägen</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Fjarran.jpg"
-              alt="Fjärran"
-            />
-            <p>Fjärran</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Nara.jpg"
-              alt="Nära"
-            />
-            <p>Nära</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Berattelsen.jpg"
-              alt="Berättelsen"
-            />
-            <p>Berättelsen</p>
+          <div
+            v-for="deltagande in deltagandeUpptackare"
+            v-bind:key="deltagande.id"
+            class="badge"
+          >
+            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
+            <p>{{ deltagande.name }}</p>
+            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+              <h4>{{ deltagande.desc }}</h4>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="aventyrare">
-        <h2>Äventyrarscout</h2>
+        <h2>Äventyrare</h2>
         <div class="deltagande-gallery">
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Forebilden.jpg"
-              alt="Förebilden"
-            />
-            <p>Förebilden</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Bygget.jpg"
-              alt="Bygget"
-            />
-            <p>Bygget</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Hajken.jpg"
-              alt="Hajken"
-            />
-            <p>Hajken</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Miljon.jpg"
-              alt="Miljön"
-            />
-            <p>Miljön</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Motet.jpg"
-              alt="Mötet"
-            />
-            <p>Mötet</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Varlden.jpg"
-              alt="Världen"
-            />
-            <p>Världen</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Rosten.jpg"
-              alt="Rösten"
-            />
-            <p>Rösten</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Scenen.jpg"
-              alt="Scenen"
-            />
-            <p>Scenen</p>
+          <div
+            v-for="deltagande in deltagandeAventyrare"
+            v-bind:key="deltagande.id"
+            class="badge"
+          >
+            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
+            <p>{{ deltagande.name }}</p>
+            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+              <h4>{{ deltagande.desc }}</h4>
+              <p>{{ deltagande.innehall }}</p>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="utmanare">
-        <h2>Utmanarscout</h2>
+        <h2>Utmanare</h2>
         <div class="deltagande-gallery">
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Borjan.jpg"
-              alt="Början"
-            />
-            <p>Början</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Engagera.jpg"
-              alt="Engagera"
-            />
-            <p>Engagera</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Hjalpa.jpg"
-              alt="Hjälpa"
-            />
-            <p>Hjälpa</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Vaga.jpg"
-              alt="Våga"
-            />
-            <p>Våga</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Ta-stallning.jpg"
-              alt="Ta ställning"
-            />
-            <p>Ta ställning</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Paverka.jpg"
-              alt="Påverka"
-            />
-            <p>Påverka</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Utveckla.jpg"
-              alt="Utveckla"
-            />
-            <p>Utveckla</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Utforska.jpg"
-              alt="Utforska"
-            />
-            <p>Utforska</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Orka.jpg"
-              alt="Orka"
-            />
-            <p>Orka</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Fortsattningen.jpg"
-              alt="Fortsättningen"
-            />
-            <p>Fortsättningen</p>
+          <div
+            v-for="deltagande in deltagandeUtmanare"
+            v-bind:key="deltagande.id"
+            class="badge"
+          >
+            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
+            <p>{{ deltagande.name }}</p>
+            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+              <h4>{{ deltagande.desc }}</h4>
+              <p>{{ deltagande.innehall }}</p>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="rover">
-        <h2>Roverscout</h2>
+        <h2>Rover</h2>
         <div class="deltagande-gallery">
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Ledarskapet.jpg"
-              alt="Ledarskapet"
-            />
-            <p>Ledarskapet</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Naturen.jpg"
-              alt="Naturen"
-            />
-            <p>Naturen</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Samhallet.jpg"
-              alt="Samhället"
-            />
-            <p>Samhället</p>
-          </div>
-          <div class="badge">
-            <img
-              class="img"
-              src="../assets/Deltagandemarken/Kulturen.jpg"
-              alt="Kulturen"
-            />
-            <p>Kulturen</p>
+          <div
+            v-for="deltagande in deltagandeRover"
+            v-bind:key="deltagande.id"
+            class="badge"
+          >
+            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
+            <p>{{ deltagande.name }}</p>
+            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+              <h4>{{ deltagande.desc }}</h4>
+              <p>{{ deltagande.innehall }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -289,8 +94,24 @@
 </template>
 
 <script>
+import deltagandeSparare from "../data/deltagandeSparare";
+import deltagandeUpptackare from "../data/deltagandeUpptackare";
+import deltagandeAventyrare from "../data/deltagandeAventyrare";
+import deltagandeUtmanare from "../data/deltagandeUtmanare";
+import deltagandeRover from "../data/deltagandeRover";
 export default {
-  name: "deltagande"
+  name: "deltagande",
+
+  data() {
+    return {
+      deltagandeSparare: deltagandeSparare,
+      deltagandeUpptackare: deltagandeUpptackare,
+      deltagandeAventyrare: deltagandeAventyrare,
+      deltagandeUtmanare: deltagandeUtmanare,
+      deltagandeRover: deltagandeRover,
+      showBadgeInfoDeltagande: true
+    };
+  }
 };
 </script>
 
