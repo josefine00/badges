@@ -2,19 +2,47 @@
   <div>
     <h1>Deltagandemärken</h1>
     <div class="deltagande gallery">
+      <div class="info-badge">
+        <h5 class="line-left">
+          Deltagandemärken delas ut till Scouter som har varit med i ett projekt
+          en termin eller ett läger. Dessa märken skiljer sig från varandra
+          beroende på vilken åldersgrupp du tillhör samt olika intressen och ju
+          äldre du blir, desto större möjlighet har du att engagera dig och bli
+          tilldelad fler märken.
+        </h5>
+        <h5 class="line-left">
+          Ett deltagandemärke är ett minne av de upplevelser ni har haft
+          tillsammans i patrullen.
+        </h5>
+      </div>
       <div class="sparare">
         <h2>Spårare</h2>
         <div class="deltagande-gallery">
           <div
+            role="tablist"
             v-for="deltagande in deltagandeSparare"
             v-bind:key="deltagande.id"
             class="badge"
           >
-            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
-            <p>{{ deltagande.name }}</p>
-            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+            <b-card role="tab" class="b-card">
+              <div v-b-toggle="deltagande.id">
+                <img
+                  :src="deltagande.image"
+                  :alt="deltagande.name"
+                  class="img"
+                />
+                <p>{{ deltagande.name }}</p>
+              </div>
+            </b-card>
+            <b-collapse
+              role="tabpanel"
+              :id="deltagande.id"
+              v-show="showBadgeInfoDeltagande"
+              accordion="deltagande-sparare-badges"
+              class="badgeinfo"
+            >
               <h4>{{ deltagande.desc }}</h4>
-            </div>
+            </b-collapse>
           </div>
         </div>
       </div>
@@ -23,15 +51,30 @@
         <h2>Upptäckare</h2>
         <div class="deltagande-gallery">
           <div
+            role="tablist"
             v-for="deltagande in deltagandeUpptackare"
             v-bind:key="deltagande.id"
             class="badge"
           >
-            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
-            <p>{{ deltagande.name }}</p>
-            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+            <b-card role="tab" class="b-card">
+              <div v-b-toggle="deltagande.id">
+                <img
+                  :src="deltagande.image"
+                  :alt="deltagande.name"
+                  class="img"
+                />
+                <p>{{ deltagande.name }}</p>
+              </div>
+            </b-card>
+            <b-collapse
+              role="tabpanel"
+              :id="deltagande.id"
+              v-show="showBadgeInfoDeltagande"
+              accordion="deltagande-upptackare-badges"
+              class="badgeinfo"
+            >
               <h4>{{ deltagande.desc }}</h4>
-            </div>
+            </b-collapse>
           </div>
         </div>
       </div>
@@ -40,16 +83,31 @@
         <h2>Äventyrare</h2>
         <div class="deltagande-gallery">
           <div
+            role="tablist"
             v-for="deltagande in deltagandeAventyrare"
             v-bind:key="deltagande.id"
             class="badge"
           >
-            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
-            <p>{{ deltagande.name }}</p>
-            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+            <b-card role="tab" class="b-card">
+              <div v-b-toggle="deltagande.id">
+                <img
+                  :src="deltagande.image"
+                  :alt="deltagande.name"
+                  class="img"
+                />
+                <p>{{ deltagande.name }}</p>
+              </div>
+            </b-card>
+            <b-collapse
+              role="tabpanel"
+              :id="deltagande.id"
+              v-show="showBadgeInfoDeltagande"
+              accordion="deltagande-aventyrare-badges"
+              class="badgeinfo"
+            >
               <h4>{{ deltagande.desc }}</h4>
               <p>{{ deltagande.innehall }}</p>
-            </div>
+            </b-collapse>
           </div>
         </div>
       </div>
@@ -58,16 +116,31 @@
         <h2>Utmanare</h2>
         <div class="deltagande-gallery">
           <div
+            role="tablist"
             v-for="deltagande in deltagandeUtmanare"
             v-bind:key="deltagande.id"
             class="badge"
           >
-            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
-            <p>{{ deltagande.name }}</p>
-            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+            <b-card role="tab" class="b-card">
+              <div v-b-toggle="deltagande.id">
+                <img
+                  :src="deltagande.image"
+                  :alt="deltagande.name"
+                  class="img"
+                />
+                <p>{{ deltagande.name }}</p>
+              </div>
+            </b-card>
+            <b-collapse
+              role="tabpanel"
+              :id="deltagande.id"
+              v-show="showBadgeInfoDeltagande"
+              accordion="deltagande-utmanare-badges"
+              class="badgeinfo"
+            >
               <h4>{{ deltagande.desc }}</h4>
               <p>{{ deltagande.innehall }}</p>
-            </div>
+            </b-collapse>
           </div>
         </div>
       </div>
@@ -76,16 +149,31 @@
         <h2>Rover</h2>
         <div class="deltagande-gallery">
           <div
+            role="tablist"
             v-for="deltagande in deltagandeRover"
             v-bind:key="deltagande.id"
             class="badge"
           >
-            <img :src="deltagande.image" :alt="deltagande.name" class="img" />
-            <p>{{ deltagande.name }}</p>
-            <div v-show="showBadgeInfoDeltagande" class="badgeinfo">
+            <b-card role="tab" class="b-card">
+              <div v-b-toggle="deltagande.id">
+                <img
+                  :src="deltagande.image"
+                  :alt="deltagande.name"
+                  class="img"
+                />
+                <p>{{ deltagande.name }}</p>
+              </div>
+            </b-card>
+            <b-collapse
+              role="tabpanel"
+              :id="deltagande.id"
+              v-show="showBadgeInfoDeltagande"
+              accordion="deltagande-rover-badges"
+              class="badgeinfo"
+            >
               <h4>{{ deltagande.desc }}</h4>
               <p>{{ deltagande.innehall }}</p>
-            </div>
+            </b-collapse>
           </div>
         </div>
       </div>
@@ -127,5 +215,10 @@ export default {
   align-items: flex-start;
   flex-wrap: wrap;
   background-color: #ffffff;
+  padding-bottom: 50px;
+}
+
+.deltagande h2 {
+  margin-top: 20px;
 }
 </style>

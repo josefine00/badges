@@ -5,7 +5,7 @@
       <div class="formPatrol">
         <button
           @click="togglePatrolForm"
-          class="btn btn-primary formButton"
+          class="formButton"
           id="addPatrolButton"
         >
           Lägg till patrull
@@ -41,44 +41,110 @@
                   'Upptäckare',
                   'Äventyrare',
                   'Utmanare',
-                  'Rover'
+                  'Rover',
+                  'Ledare'
                 ]"
               ></b-form-select>
             </b-form-group>
 
             <b-form-group
-              id="ScoutNameGroup"
-              label="Scouternas namn:"
-              label-for="ScoutName"
+              id="ScoutNameGroup1"
+              label="Scout 1 namn:"
+              label-for="ScoutName1"
             >
               <b-form-input
                 id="scoutName1"
-                v-model="formData.scoutName"
+                v-model="formData.scoutName1"
+                required
                 placeholder="Skriv scoutens namn..."
               >
               </b-form-input>
             </b-form-group>
 
-            <b-button
-              type="submit"
-              variant="success"
-              class="formButton"
-              id="formSubmit"
-              >Spara</b-button
+            <b-form-group
+              id="ScoutNameGroup2"
+              label="Scout 2 namn:"
+              label-for="ScoutName2"
             >
-            <b-button
-              type="reset"
-              variant="primary"
-              class="formButton"
-              id="formReset"
-              >Återställ</b-button
+              <b-form-input
+                id="scoutName2"
+                v-model="formData.scoutName2"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup3"
+              label="Scout 3 namn:"
+              label-for="ScoutName3"
             >
+              <b-form-input
+                id="scoutName3"
+                v-model="formData.scoutName3"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup4"
+              label="Scout 4 namn:"
+              label-for="ScoutName4"
+            >
+              <b-form-input
+                id="scoutName4"
+                v-model="formData.scoutName4"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup5"
+              label="Scout 5 namn:"
+              label-for="ScoutName5"
+            >
+              <b-form-input
+                id="scoutName5"
+                v-model="formData.scoutName5"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup6"
+              label="Scout 6 namn:"
+              label-for="ScoutName6"
+            >
+              <b-form-input
+                id="scoutName6"
+                v-model="formData.scoutName6"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-button type="submit" class="formButton" id="formSubmit">
+              Spara
+            </b-button>
+
+            <b-button type="reset" class="formButton" id="formReset">
+              Återställ
+            </b-button>
           </b-form>
         </section>
       </div>
 
       <div class="table">
-        <b-table class="patrolTable" striped hover :items="patrols"> </b-table>
+        <b-table class="patrolTable" striped hover :items="patrols">
+          <template slot="name" slot-scope="data">
+            <router-link :to="`/patruller/${patrols.name}`">
+              {{ data.value }}
+            </router-link>
+          </template>
+        </b-table>
       </div>
     </div>
   </div>
@@ -86,17 +152,29 @@
 
 <script>
 import { mapActions } from "vuex";
+import patrols from "../data/patrols";
 
 export default {
   name: "form-table",
   data() {
     return {
+      //Datan i formuläret vid start
       formData: {
         patrolName: "",
         patrolAge: null,
-        scoutName: ""
+        scoutName1: "",
+        scoutName2: "",
+        scoutName3: "",
+        scoutName4: "",
+        scoutName5: "",
+        scoutName6: "",
+        patrols: patrols
       },
+
+      //Formuläret är stängt från början
       showPatrolForm: false,
+
+      //Array med patruller, ska ändras till state arrayen patrols
       patrols: [
         {
           patrolName: "Vargarna",
@@ -126,11 +204,25 @@ export default {
 
     //Sätter datan i formuläret till payloaden
     handleSubmit() {
-      const { patrolName, patrolAge, scoutName } = this.formData;
+      const {
+        patrolName,
+        patrolAge,
+        scoutName1,
+        scoutName2,
+        scoutName3,
+        scoutName4,
+        scoutName5,
+        scoutName6
+      } = this.formData;
       const payload = {
         patrolName,
         patrolAge,
-        scoutName
+        scoutName1,
+        scoutName2,
+        scoutName3,
+        scoutName4,
+        scoutName5,
+        scoutName6
       };
 
       //Skickar vidare payloaden till addPatrol (actions.js)
@@ -140,7 +232,12 @@ export default {
       this.formData = {
         patrolName: "",
         patrolAge: null,
-        scoutName: ""
+        scoutName1: "",
+        scoutName2: "",
+        scoutName3: "",
+        scoutName4: "",
+        scoutName5: "",
+        scoutName6: ""
       };
     }
   }
@@ -152,6 +249,9 @@ export default {
   margin: 1rem;
   background-color: rgb(0, 54, 96);
   border-color: rgb(0, 54, 96);
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
 }
 
 .formButton:hover {
@@ -159,8 +259,9 @@ export default {
   border-color: rgb(0, 33, 58);
 }
 
-#ScoutNameGroup * {
-  margin-bottom: 2rem;
+.formButton:active {
+  background-color: rgb(0, 33, 58);
+  border-color: rgb(0, 33, 58);
 }
 
 .form {
@@ -168,6 +269,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
+  border-radius: 25px;
 }
 
 .formPatrol {
@@ -180,6 +282,7 @@ export default {
 .table {
   width: 100%;
   margin-top: 5%;
+  padding-bottom: 20px;
 }
 
 .addPatrol {

@@ -81,6 +81,7 @@ li a:hover {
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
+  border-radius: 25px;
 }
 
 .badge {
@@ -89,8 +90,7 @@ li a:hover {
 }
 
 .badge p {
-  font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 .img {
@@ -100,9 +100,45 @@ li a:hover {
 .badgeinfo {
   text-align: left;
   padding: 2.5em;
+  width: 300%;
+  margin-left: 50%;
+  margin-right: 50%;
+  background-color: #ececec;
+  border-radius: 25px;
+}
+
+.bevis .badgeinfo {
+  margin-left: 0;
+}
+
+.b-card {
+  border: none;
 }
 
 h1 {
   padding: 1rem;
+}
+
+.card-body {
+  flex: none;
+  min-height: 0;
+  padding: 0;
+}
+
+.info-badge {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  padding: 2.5em;
+  text-align: left;
+  background-color: #ececec;
+  border-radius: 25px;
+}
+
+.line-left {
+  border-left: solid 5px rgb(0, 54, 96);
+  padding-left: 20px;
 }
 </style>
