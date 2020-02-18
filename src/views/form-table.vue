@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Patruller</h1>
+    <h1 class="sideName">Patruller</h1>
     <div class="form">
       <div class="formPatrol">
         <button
@@ -147,6 +147,7 @@
         </b-table>
       </div>
     </div>
+    <div class="fyllnad"></div>
   </div>
 </template>
 

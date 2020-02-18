@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Bevismärken</h1>
-    <div class="bevis gallery">
+    <h1 class="sideName">Bevismärken</h1>
+    <div class="bevis gallery" id="bevis">
       <div class="info-badge">
         <h5 class="line-left">
           Bevismärkena skiljer sig från intressemärkena genom att de har
@@ -31,6 +31,7 @@
           v-show="showBadgeInfoBevis"
           class="badgeinfo"
         >
+          <h3>{{ bevis.name }}</h3>
           <h4>{{ bevis.desc }}</h4>
           <p><b>Innehåll: </b>{{ bevis.innehall }}</p>
           <ul>
@@ -42,6 +43,7 @@
         </b-collapse>
       </div>
     </div>
+    <div class="fyllnad"></div>
   </div>
 </template>
 
@@ -58,3 +60,36 @@ export default {
   }
 };
 </script>
+
+<style>
+#kniv {
+  margin-left: 5%;
+}
+
+#yxa-sag {
+  margin-left: -98.5%;
+}
+
+#simning {
+  margin-left: -202%;
+}
+
+#bevis {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #kniv {
+    width: 90%;
+    margin-left: 5%;
+  }
+  #yxa-sag {
+    width: 90%;
+    margin-left: 5%;
+  }
+  #simning {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+</style>

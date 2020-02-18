@@ -1,7 +1,27 @@
 <template>
   <div id="app">
+    <div class="header">
+      <img
+        class="scoutsymbol-header"
+        src="../public/scoutsymbolen-bla.png"
+        alt=""
+      />
+      <h1>Scoutmärken</h1>
+      <img
+        class="scoutsymbol-header"
+        src="../public/scoutsymbolen-bla.png"
+        alt=""
+      />
+    </div>
     <div class="nav-bar" id="nav">
       <ul>
+        <li>
+          <a>
+            <router-link to="/">
+              <img src="../public/scoutsymbolen-vit.png" class="scoutsymbol" />
+            </router-link>
+          </a>
+        </li>
         <li>
           <a>
             <router-link to="/">Hem</router-link>
@@ -40,7 +60,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(0, 54, 96);
-  background-color: #ececec;
+  background-image: url("wood2.jpg");
   line-height: 150%;
 }
 
@@ -72,6 +92,37 @@ li a:hover {
   color: white;
 }
 
+.scoutsymbol {
+  width: 25px;
+  height: auto;
+}
+
+.scoutsymbol-header {
+  width: 50px;
+  height: auto;
+}
+
+.header {
+  padding: 1.5%;
+  background-color: #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideName {
+  color: white;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 54, 96);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+}
+
 .gallery {
   display: flex;
   justify-content: center;
@@ -82,15 +133,18 @@ li a:hover {
   margin-right: auto;
   background-color: #ffffff;
   border-radius: 25px;
+  padding-bottom: 20px;
 }
 
 .badge {
   white-space: pre-line;
-  width: 25%;
+  /*width: 25%;*/
+  flex: 1 0 25%;
 }
 
 .badge p {
   font-size: 1.6em;
+  line-height: 125%;
 }
 
 .img {
@@ -113,6 +167,7 @@ li a:hover {
 
 .b-card {
   border: none;
+  background-color: transparent;
 }
 
 h1 {
@@ -123,6 +178,7 @@ h1 {
   flex: none;
   min-height: 0;
   padding: 0;
+  background-color: transparent;
 }
 
 .info-badge {
@@ -140,5 +196,26 @@ h1 {
 .line-left {
   border-left: solid 5px rgb(0, 54, 96);
   padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.fyllnad {
+  padding: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .scoutsymbol-header {
+    width: 50px;
+    height: auto;
+  }
 }
 </style>
