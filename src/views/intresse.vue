@@ -48,6 +48,15 @@
           <h4>{{ intresse.desc }}</h4>
           <p v-if="intresse.malspar"><b>Målspår: </b>{{ intresse.malspar }}</p>
           <p><b>Innehåll: </b>{{ intresse.innehall }}</p>
+          <ul
+            v-for="list in intresse.list"
+            v-bind:key="list.listId"
+            :id="list.listId"
+          >
+            <li>
+              {{ list.krav }}
+            </li>
+          </ul>
           <p>{{ intresse.info }}</p>
         </b-collapse>
       </div>
@@ -245,217 +254,217 @@ export default {
 
 @media only screen and (max-width: 600px) {
   #int-lara {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #int-lyssna {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
   #int-mota {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #klura {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #hitta {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #finna {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #tanda {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #brinna {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #elda {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #matettan {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #mattvaan {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #mattrean {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #goda-garningar {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #varldsforbattraren {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #spela {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #filma {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #skapa {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #fixa {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #forsta-rep {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #andra-rep {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #da-och-nu {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #livsaskadning {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #blogga {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #chatta {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #vara-ute-vinter {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #vara-ute-vatten {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #vara-ute-staden {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #vara-ute-skogen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #vara-ute-fjallet {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #plastra {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #hjalpa {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #radda {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #rekrytera {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #miljo-sortera {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #miljo-atervinn {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #demokrati {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #bygga {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #naturligt {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #vader {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #paddla {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #under-ytan {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #vatten {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #morker {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -42.5%;
   }
 }
 </style>

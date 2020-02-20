@@ -34,9 +34,13 @@
           <h3>{{ bevis.name }}</h3>
           <h4>{{ bevis.desc }}</h4>
           <p><b>Innehåll: </b>{{ bevis.innehall }}</p>
-          <ul>
+          <ul
+            v-for="list in bevis.list"
+            v-bind:key="list.listId"
+            :id="list.listId"
+          >
             <li>
-              {{ bevis.list }}
+              {{ list.krav }}
             </li>
           </ul>
           <p>{{ bevis.info }}</p>
@@ -62,34 +66,41 @@ export default {
 </script>
 
 <style>
-#kniv {
-  margin-left: 5%;
-}
-
-#yxa-sag {
-  margin-left: -98.5%;
-}
-
-#simning {
-  margin-left: -202%;
+.bevis .badgeinfo {
+  width: 250%;
 }
 
 #bevis {
   justify-content: center;
 }
 
+#kniv {
+  width: 300%;
+  margin-left: 4%;
+}
+
+#yxa-sag {
+  width: 300%;
+  margin-left: -99.5%;
+}
+
+#simning {
+  width: 300%;
+  margin-left: -203%;
+}
+
 @media only screen and (max-width: 600px) {
   #kniv {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
   #yxa-sag {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
   #simning {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -42.5%;
   }
 }
 </style>

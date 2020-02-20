@@ -42,7 +42,7 @@ const deltagandeAventyrare = [
     desc:
       "För äventyrarscouter finns åtta projekt som kallas äventyr. Det är äventyrarscouternas deltagandemärken. Patrullen bestämmer vilket äventyr de vill genomföra, och äventyren är lagom många och lagom stora för att hinna med ungefär ett per termin. Ni kan också välja att jobba med ett äventyr under en sommar eller ett skollov. Varje patrull bestämmer vad de tycker är roligast och finns det flera patruller i samma avdelning kan patrullerna jobba med olika äventyr. Även om flera patruller väljer samma äventyr genomför varje patrull sitt eget projekt för sig. I aktivitetsbanken hittar du mer information om varje äventyr!",
     innehall:
-      "Här ska ni träfa en ungdomsgrupp med en annan inriktning än ni själva och fundera över hur era livsåskådningar och mål är lika eller olika."
+      "Här ska ni träffa en ungdomsgrupp med en annan inriktning än ni själva och fundera över hur era livsåskådningar och mål är lika eller olika."
   },
   {
     name: "Världen",

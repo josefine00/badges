@@ -138,12 +138,14 @@
       </div>
 
       <div class="table">
-        <b-table class="patrolTable" striped hover :items="patrols">
-          <template slot="name" slot-scope="data">
-            <router-link :to="`/patruller/${patrols.name}`">
-              {{ data.value }}
-            </router-link>
-          </template>
+        <b-table
+          class="patrolTable"
+          striped
+          hover
+          :items="patrols"
+          :fields="fields"
+        >
+          <template v-slot:cell(scouts)="patrols"> </template>
         </b-table>
       </div>
     </div>
@@ -163,12 +165,14 @@ export default {
       formData: {
         patrolName: "",
         patrolAge: null,
-        scoutName1: "",
-        scoutName2: "",
-        scoutName3: "",
-        scoutName4: "",
-        scoutName5: "",
-        scoutName6: "",
+        scouts: [
+          { scoutName1: "" },
+          { scoutName2: "" },
+          { scoutName3: "" },
+          { scoutName4: "" },
+          { scoutName5: "" },
+          { scoutName6: "" }
+        ],
         patrols: patrols
       },
 
@@ -180,17 +184,42 @@ export default {
         {
           patrolName: "Vargarna",
           patrolAge: "Äventyrare",
-          scoutName: "Ellen"
+          scouts: [
+            { scoutName1: "Ellen" },
+            { scoutName2: "Sanna" },
+            { scoutName3: "Amanda" }
+          ]
         },
         {
           patrolName: "Uttrarna",
           patrolAge: "Upptäckare",
-          scoutName: "Leo"
+          scouts: [
+            { scoutName1: "Leo" },
+            { scoutName2: "Indra" },
+            { scoutName3: "Cian" },
+            { scoutName4: "Annie" },
+            { scoutName5: "Alwin" }
+          ]
         },
         {
           patrolName: "Hökarna",
           patrolAge: "Spårare",
-          scoutName: "Emil"
+          scouts: [
+            { scoutName1: "Emil" },
+            { scoutName2: "Mollie" },
+            { scoutName3: "Alice" },
+            { scoutName4: "Nils" }
+          ]
+        }
+      ],
+
+      //Vilka fält som ska visas i table
+      fields: [
+        { key: "patrolName", label: "Patrullnamn" },
+        { key: "patrolAge", label: "Åldersgrupp" },
+        {
+          key: "scouts",
+          label: "Antal scouter"
         }
       ]
     };
@@ -233,12 +262,14 @@ export default {
       this.formData = {
         patrolName: "",
         patrolAge: null,
-        scoutName1: "",
-        scoutName2: "",
-        scoutName3: "",
-        scoutName4: "",
-        scoutName5: "",
-        scoutName6: ""
+        scouts: [
+          { scoutName1: "" },
+          { scoutName2: "" },
+          { scoutName3: "" },
+          { scoutName4: "" },
+          { scoutName5: "" },
+          { scoutName6: "" }
+        ]
       };
     }
   }

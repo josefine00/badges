@@ -10,22 +10,29 @@ const beviss = [
     list: [
       {
         krav:
-          "Hur en kniv används så att ingen person, du själv eller andra, skadar sig och följa detta när du använder kniven."
+          "Hur en kniv används så att ingen person, du själv eller andra, skadar sig och följa detta när du använder kniven.",
+        listId: "kniv-1"
       },
       {
         krav:
-          "Veta hur en kniv tas emot och lämnas på ett säkert sätt och följa detta när du använder kniven"
+          "Veta hur en kniv tas emot och lämnas på ett säkert sätt och följa detta när du använder kniven",
+        listId: "kniv-2"
       },
       {
         krav:
-          "Hantera kniven på ett sätt som gör att den inte skadas eller slits mer än nödvändigt"
+          "Hantera kniven på ett sätt som gör att den inte skadas eller slits mer än nödvändigt",
+        listId: "kniv-3"
       },
-      { krav: "Känna till vad den Svenska knivlagen innebär" },
-      { krav: "Veta vad knivens delar kallas" },
-      { krav: "Kunna slipa en kniv" },
+      {
+        krav: "Känna till vad den Svenska knivlagen innebär",
+        listId: "kniv-4"
+      },
+      { krav: "Veta vad knivens delar kallas", listId: "kniv-5" },
+      { krav: "Kunna slipa en kniv", listId: "kniv-6" },
       {
         krav:
-          "Provat att tälja något användbart på ett säkert sätt som ledaren godkänt."
+          "Provat att tälja något användbart på ett säkert sätt som ledaren godkänt.",
+        listId: "kniv-7"
       }
     ],
     info:
@@ -40,12 +47,34 @@ const beviss = [
     innehall:
       "För att få yx- sågmärket ska du känna till och kunna visa dina patrullkompisar och din ledare: ",
     list: [
-      "Kunna hugga och såga säkert så att ingen person, du själv eller andra, skadar sig och följa detta när du använder yxan och sågen.",
-      "Veta hur en såg och en yxa skyddas när man ska ta dem med sig och följa detta när ni ska någonstans",
-      "Veta hur en såg och en yxa förvaras när den inte används, både utomhus och inne (på övernattning och i förråd) och följa detta.",
-      "Kunna använda yxan till att kvista en slana eller stock för att kunna använda den till något.",
-      "Kunna namnge yxans och sågens olika delar",
-      "Kunna slipa en yxa och byta sågblad på en såg."
+      {
+        krav:
+          "Kunna hugga och såga säkert så att ingen person, du själv eller andra, skadar sig och följa detta när du använder yxan och sågen.",
+        listId: "yxa-sag-1"
+      },
+      {
+        krav:
+          "Veta hur en såg och en yxa skyddas när man ska ta dem med sig och följa detta när ni ska någonstans",
+        listId: "yxa-sag-2"
+      },
+      {
+        krav:
+          "Veta hur en såg och en yxa förvaras när den inte används, både utomhus och inne (på övernattning och i förråd) och följa detta.",
+        listId: "yxa-sag-3"
+      },
+      {
+        krav:
+          "Kunna använda yxan till att kvista en slana eller stock för att kunna använda den till något.",
+        listId: "yxa-sag-4"
+      },
+      {
+        krav: "Kunna namnge yxans och sågens olika delar",
+        listId: "yxa-sag-5"
+      },
+      {
+        krav: "Kunna slipa en yxa och byta sågblad på en såg.",
+        listId: "yxa-sag-6"
+      }
     ],
     info:
       "Gör aktiviteterna kopplade till bevismärket i ett sammanhang så att det blir tydligt för alla när kunskaperna är tänkta att användas. Till exempel genom att hugga ved för att kunna göra upp eld eller ta ner ett mindre träd som ändå ska rensas undan. Behöver du tips på bra aktiviteter kolla på www.aktivitetsbanken.se, prata med ledarvänner eller fråga vad scouterna vill hitta på för att uppnå målet med att lära sig allt om yxa och såg."
@@ -59,15 +88,43 @@ const beviss = [
     innehall:
       "För att få simbeviset ska du kunna visa dina patrullkompisar och din ledare: ",
     list: [
-      "Att du kan simma 200 meter",
-      "Att du kan dyka eller hoppa i vattnet från en brygga eller bassängkant",
-      "Att du känner till och följer de viktigaste badreglerna",
-      "Exempel på badregler: ",
-      "Bada alltid tillsammans med minst en kompis",
-      "Knuffa aldrig i någon annan",
-      "Simma inte under hoppställningar",
-      "Dyk aldrig i vattnet om du inte vet hur det ser ut under ytan",
-      "Ropa aldrig på hjälp på skoj"
+      {
+        krav: "Att du kan simma 200 meter",
+        listId: "simning-1"
+      },
+      {
+        krav:
+          "Att du kan dyka eller hoppa i vattnet från en brygga eller bassängkant",
+        listId: "simning-2"
+      },
+      {
+        krav: "Att du känner till och följer de viktigaste badreglerna",
+        listId: "simning-3"
+      },
+      {
+        krav: "Exempel på badregler: ",
+        listId: "list-desc"
+      },
+      {
+        krav: "Bada alltid tillsammans med minst en kompis",
+        listId: "simning-4"
+      },
+      {
+        krav: "Knuffa aldrig i någon annan",
+        listId: "simning-5"
+      },
+      {
+        krav: "Simma inte under hoppställningar",
+        listId: "simning-6"
+      },
+      {
+        krav: "Dyk aldrig i vattnet om du inte vet hur det ser ut under ytan",
+        listId: "simning-7"
+      },
+      {
+        krav: "Ropa aldrig på hjälp på skoj",
+        listId: "simning-8"
+      }
     ],
     info:
       "Badreglerna som finns listade är exempel på viktiga förhållningsregler. Fyll gärna på eller justera för att passa er verksamhet på bästa sätt. Behöver du tips på bra aktiviteter kolla på www.aktivitetsbanken.se, prata med ledarvänner eller fråga vad scouterna vill hitta på för att uppnå målet med att lära sig allt om simning."

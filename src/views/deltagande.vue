@@ -16,7 +16,12 @@
         </h5>
       </div>
       <div class="delt sparare">
-        <h2>Spårare</h2>
+        <div class="deltagande-header">
+          <img src="sparare.png" alt="Spårarsymbolen" class="ageGroupLogo" />
+          <h2>Spårare</h2>
+          <img src="sparare.png" alt="Spårarsymbolen" class="ageGroupLogo" />
+        </div>
+
         <div class="deltagande-gallery">
           <div
             role="tablist"
@@ -49,7 +54,19 @@
       </div>
 
       <div class="delt upptackare">
-        <h2>Upptäckare</h2>
+        <div class="deltagande-header">
+          <img
+            src="upptackare.png"
+            alt="Upptäckarsymbolen"
+            class="ageGroupLogo"
+          />
+          <h2>Upptäckare</h2>
+          <img
+            src="upptackare.png"
+            alt="Upptäckarsymbolen"
+            class="ageGroupLogo"
+          />
+        </div>
         <div class="deltagande-gallery">
           <div
             role="tablist"
@@ -82,7 +99,19 @@
       </div>
 
       <div class="delt aventyrare">
-        <h2>Äventyrare</h2>
+        <div class="deltagande-header">
+          <img
+            src="aventyrare.png"
+            alt="Äventyrarsymbolen"
+            class="ageGroupLogo"
+          />
+          <h2>Äventyrare</h2>
+          <img
+            src="aventyrare.png"
+            alt="Äventyrarsymbolen"
+            class="ageGroupLogo"
+          />
+        </div>
         <div class="deltagande-gallery">
           <div
             role="tablist"
@@ -116,7 +145,11 @@
       </div>
 
       <div class="delt utmanare">
-        <h2>Utmanare</h2>
+        <div class="deltagande-header">
+          <img src="utmanare.png" alt="Utmanarsymbolen" class="ageGroupLogo" />
+          <h2>Utmanare</h2>
+          <img src="utmanare.png" alt="Utmanarsymbolen" class="ageGroupLogo" />
+        </div>
         <div class="deltagande-gallery">
           <div
             role="tablist"
@@ -150,7 +183,11 @@
       </div>
 
       <div class="delt rover">
-        <h2>Rover</h2>
+        <div class="deltagande-header">
+          <img src="rover.png" alt="Roversymbolen" class="ageGroupLogo" />
+          <h2>Rover</h2>
+          <img src="rover.png" alt="Roversymbolen" class="ageGroupLogo" />
+        </div>
         <div class="deltagande-gallery">
           <div
             role="tablist"
@@ -210,7 +247,15 @@ export default {
 </script>
 
 <style>
-.deltagande img {
+.rover {
+  width: 100%;
+}
+
+.sparare {
+  width: 100%;
+}
+
+.deltagande-gallery img {
   width: 225px;
   height: auto;
 }
@@ -224,6 +269,13 @@ export default {
   padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.deltagande-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .deltagande h2 {
@@ -360,163 +412,163 @@ export default {
 
 @media only screen and (max-width: 600px) {
   #fotspar {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #ljusspar {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #djurspar {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #tidspar {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #horisonten {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #manniskan {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #vagen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #fjarran {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #nara {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #berattelsen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #forebilden {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #bygget {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #hajken {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #miljon {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #motet {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #varlden {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #rosten {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #scenen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #borjan {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #engagera {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #hjalpa-deltagande {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #vaga {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #ta-stallning {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #paverka {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #utveckla {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #utforska {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #orka {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #fortsattningen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #ledarskapet {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #naturen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 
   #samhallet {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: 9.7%;
   }
 
   #kulturen {
-    width: 90%;
-    margin-left: 5%;
+    width: 185%;
+    margin-left: -94.9%;
   }
 }
 </style>

@@ -4,13 +4,13 @@
       <img
         class="scoutsymbol-header"
         src="../public/scoutsymbolen-bla.png"
-        alt=""
+        alt="Scoutsymbolen"
       />
       <h1>Scoutmärken</h1>
       <img
         class="scoutsymbol-header"
         src="../public/scoutsymbolen-bla.png"
-        alt=""
+        alt="Scoutsymbolen"
       />
     </div>
     <div class="nav-bar" id="nav">
@@ -125,7 +125,7 @@ li a:hover {
 
 .gallery {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 75%;
@@ -138,8 +138,8 @@ li a:hover {
 
 .badge {
   white-space: pre-line;
-  /*width: 25%;*/
   flex: 1 0 25%;
+  max-width: 25%;
 }
 
 .badge p {
@@ -161,13 +161,33 @@ li a:hover {
   border-radius: 25px;
 }
 
-.bevis .badgeinfo {
-  margin-left: 0;
+.badgeinfo ul {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.badgeinfo li {
+  float: left;
+  font-size: 1.4em;
+  word-wrap: break-word;
+}
+
+#list-desc {
+  padding-top: 15px;
+  list-style-type: none;
+  width: 110%;
 }
 
 .b-card {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 h1 {
@@ -200,6 +220,12 @@ h1 {
   padding-bottom: 5px;
 }
 
+.ageGroupLogo {
+  width: 50px;
+  height: auto;
+  margin: 15px;
+}
+
 .fyllnad {
   padding: 200px;
 }
@@ -216,6 +242,10 @@ h1 {
   .scoutsymbol-header {
     width: 50px;
     height: auto;
+  }
+
+  .badge {
+    max-width: 50%;
   }
 }
 </style>
