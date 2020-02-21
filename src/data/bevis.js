@@ -3,6 +3,12 @@ const beviss = [
     name: "Kniv",
     id: "kniv",
     image: "../assets/Bevismarken/Kniv.jpg",
+    ageImage: [
+      { image: "upptackare.png", name: "Upptäckare" },
+      { image: "aventyrare.png", name: "Äventyrare" },
+      { image: "utmanare.png", name: "Utmanare" },
+      { image: "rover.png", name: "Rover" }
+    ],
     desc:
       "Kniven är ett praktiskt verktyg som samtidigt kan skada allvarligt. Aktiviteterna för att få knivmärket är tänkta att ge scouten de färdigheter och kunskaper som behövs för att hantera en kniv på ett säkert sätt. Att jobba med knivbeviset innebär både praktiska övningar och samtal om vad som är viktigt att tänka på.",
     innehall:
@@ -42,6 +48,12 @@ const beviss = [
     name: "Yxa och såg",
     id: "yxa-sag",
     image: "../assets/Bevismarken/Yxa-sag.jpg",
+    ageImage: [
+      { image: "upptackare.png", name: "Upptäckare" },
+      { image: "aventyrare.png", name: "Äventyrare" },
+      { image: "utmanare.png", name: "Utmanare" },
+      { image: "rover.png", name: "Rover" }
+    ],
     desc:
       "Yxan och sågen är praktiska verktyg samtidigt som de kan skada allvarligt. Aktiviteterna för att få märket är tänkta att ge scouten de färdigheter och kunskaper som behövs för att hantera verktygen på ett säkert sätt. Att jobba med bevismärket innebär både praktiska övningar och samtal om vad som är viktigt att tänka på.",
     innehall:
@@ -83,6 +95,13 @@ const beviss = [
     name: "Simning",
     id: "simning",
     image: "../assets/Bevismarken/Simning.jpg",
+    ageImage: [
+      { image: "sparare.png", name: "Spårare" },
+      { image: "upptackare.png", name: "Upptäckare" },
+      { image: "aventyrare.png", name: "Äventyrare" },
+      { image: "utmanare.png", name: "Utmanare" },
+      { image: "rover.png", name: "Rover" }
+    ],
     desc:
       "Att kunna simma är en bra förutsättning för att aktiviteter på eller i närheten av vatten ska vara säkra och roliga. Att jobba med simmärket innebär både praktiska övningar och samtal om hur man ska agera. Jobba gärna med simmärket inför att ni ska göra något på eller vid vattnet så att alla förstår varför det är bra att kunna.",
     innehall:

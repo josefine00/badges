@@ -5,7 +5,7 @@ import Intresse from "../views/intresse.vue";
 import Bevis from "../views/bevis.vue";
 import Deltagande from "../views/deltagande.vue";
 import FormTable from "../views/form-table.vue";
-import Patrol from "../views/patrol";
+import Patrol from "../views/patrol.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
     component: FormTable
   },
   {
-    path: "/patruller/:patrols.patrolName",
+    path: "/patruller/:patrolName",
     name: "patrolName",
     component: Patrol
   }

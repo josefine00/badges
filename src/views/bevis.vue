@@ -32,6 +32,15 @@
           class="badgeinfo"
         >
           <h3>{{ bevis.name }}</h3>
+          <div class="ageGroup">
+            <div v-for="ageImage in bevis.ageImage" v-bind:key="ageImage.name">
+              <img
+                :src="ageImage.image"
+                :alt="ageImage.name"
+                class="ageImage"
+              />
+            </div>
+          </div>
           <h4>{{ bevis.desc }}</h4>
           <p><b>Innehåll: </b>{{ bevis.innehall }}</p>
           <ul

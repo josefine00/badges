@@ -177,6 +177,16 @@ li a:hover {
   font-size: 1.4em;
   word-wrap: break-word;
 }
+.ageGroup {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.ageImage {
+  width: 40px;
+  height: auto;
+}
 
 #list-desc {
   padding-top: 15px;

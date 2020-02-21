@@ -36,13 +36,16 @@
                 id="patrolAge"
                 v-model="formData.patrolAge"
                 placeholder="Välj patrullens åldersgrupp..."
+                required
                 :options="[
+                  'Familjescouter',
                   'Spårare',
                   'Upptäckare',
                   'Äventyrare',
                   'Utmanare',
                   'Rover',
-                  'Ledare'
+                  'Ledare',
+                  'Övriga'
                 ]"
               ></b-form-select>
             </b-form-group>
@@ -145,7 +148,11 @@
           :items="patrols"
           :fields="fields"
         >
-          <template v-slot:cell(scouts)="patrols"> </template>
+          <template v-slot:cell(patrolName)="data"
+            ><router-link :to="`/patruller/${data.item.patrolName}`">{{
+              data.item.patrolName
+            }}</router-link>
+          </template>
         </b-table>
       </div>
     </div>
@@ -179,46 +186,15 @@ export default {
       //Formuläret är stängt från början
       showPatrolForm: false,
 
-      //Array med patruller, ska ändras till state arrayen patrols
-      patrols: [
-        {
-          patrolName: "Vargarna",
-          patrolAge: "Äventyrare",
-          scouts: [
-            { scoutName1: "Ellen" },
-            { scoutName2: "Sanna" },
-            { scoutName3: "Amanda" }
-          ]
-        },
-        {
-          patrolName: "Uttrarna",
-          patrolAge: "Upptäckare",
-          scouts: [
-            { scoutName1: "Leo" },
-            { scoutName2: "Indra" },
-            { scoutName3: "Cian" },
-            { scoutName4: "Annie" },
-            { scoutName5: "Alwin" }
-          ]
-        },
-        {
-          patrolName: "Hökarna",
-          patrolAge: "Spårare",
-          scouts: [
-            { scoutName1: "Emil" },
-            { scoutName2: "Mollie" },
-            { scoutName3: "Alice" },
-            { scoutName4: "Nils" }
-          ]
-        }
-      ],
+      //Array med patruller från state
+      patrols: patrols,
 
       //Vilka fält som ska visas i table
       fields: [
         { key: "patrolName", label: "Patrullnamn" },
         { key: "patrolAge", label: "Åldersgrupp" },
         {
-          key: "scouts",
+          key: "scouts.length",
           label: "Antal scouter"
         }
       ]
@@ -244,15 +220,22 @@ export default {
         scoutName5,
         scoutName6
       } = this.formData;
+
+      const scouts = [
+        { name: scoutName1 },
+        { name: scoutName2 },
+        { name: scoutName3 },
+        { name: scoutName4 },
+        { name: scoutName5 },
+        { name: scoutName6 }
+      ];
+
+      const filteredScouts = scouts.filter(scout => scout.name != undefined);
+
       const payload = {
         patrolName,
         patrolAge,
-        scoutName1,
-        scoutName2,
-        scoutName3,
-        scoutName4,
-        scoutName5,
-        scoutName6
+        scouts: filteredScouts
       };
 
       //Skickar vidare payloaden till addPatrol (actions.js)
@@ -271,6 +254,7 @@ export default {
           { scoutName6: "" }
         ]
       };
+      this.showPatrolForm = !this.showPatrolForm;
     }
   }
 };

@@ -45,6 +45,19 @@
           class="badgeinfo"
         >
           <h3>{{ intresse.name }}</h3>
+          <div class="ageGroup">
+            <div
+              v-for="ageImage in intresse.ageImage"
+              v-bind:key="ageImage.name"
+            >
+              <img
+                :src="ageImage.image"
+                :alt="ageImage.name"
+                class="ageImage"
+              />
+            </div>
+          </div>
+
           <h4>{{ intresse.desc }}</h4>
           <p v-if="intresse.malspar"><b>Målspår: </b>{{ intresse.malspar }}</p>
           <p><b>Innehåll: </b>{{ intresse.innehall }}</p>
