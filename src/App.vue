@@ -74,11 +74,11 @@
   background: rgb(0, 54, 96);
 }
 
-li {
+.nav-bar li {
   float: left;
 }
 
-li a {
+.nav-bar li a {
   display: block;
   color: white;
   text-align: center;
@@ -86,7 +86,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.nav-bar li a:hover {
   background-color: rgb(0, 33, 58);
   text-decoration: none;
   color: white;

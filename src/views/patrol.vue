@@ -1,36 +1,103 @@
 <template>
   <div>
     <h1 class="sideName">{{ $route.params.patrolName }}</h1>
-    <div class="gallery">
-      <div class="selectBadges">
-        <Multiselect
-          v-model="value"
-          :options="options"
-          label="name"
-          :multiple="true"
-          :close-on-select="false"
-          placeholder="Välj märke/märken..."
-        ></Multiselect>
-      </div>
 
-      <button @click="addBadge()" class="formButton">Lägg till märken</button>
-      <div class="table">
-        <b-table
-          class="patrolTable"
-          striped
-          hover
-          :items="patrols.scouts"
-          :fields="fields"
-        >
-        </b-table>
+    <div class="gallery">
+      <div class="addBadgeForm">
+        <h4 class="formBadgeGroup">Scout:</h4>
+        <div class="selectBadges">
+          <Multiselect
+            class="multiselect"
+            v-model="valueScout"
+            :options="patrols.scouts"
+            label="name"
+            select-label="Välj scout"
+            selected-label="Vald"
+            deselect-label="Ta bort"
+            :multiple="false"
+            :close-on-select="true"
+            placeholder="Välj scout..."
+            track-by="name"
+          ></Multiselect>
+        </div>
+
+        <h4 class="formBadgeGroup">Bevismärken:</h4>
+        <div class="selectBadges">
+          <Multiselect
+            class="multiselect"
+            v-model="valueBevis"
+            :options="optionsBevis"
+            label="name"
+            select-label="Välj märke"
+            selected-label="Vald"
+            deselect-label="Ta bort"
+            :multiple="true"
+            :close-on-select="false"
+            placeholder="Välj bevismärke/märken..."
+            track-by="name"
+          >
+          </Multiselect>
+        </div>
+
+        <h4 class="formBadgeGroup">Intressemärken:</h4>
+        <div class="selectBadges">
+          <Multiselect
+            class="multiselect"
+            v-model="valueIntresse"
+            :options="optionsIntresse"
+            label="name"
+            select-label="Välj märke"
+            selected-label="Vald"
+            deselect-label="Ta bort"
+            :multiple="true"
+            :close-on-select="false"
+            placeholder="Välj intressemärke/märken..."
+            track-by="name"
+          ></Multiselect>
+        </div>
+
+        <h4 class="formBadgeGroup">Deltagandemärken:</h4>
+        <div class="selectBadges">
+          <Multiselect
+            class="multiselect"
+            v-model="valueDeltagande"
+            :options="optionsDeltagande"
+            label="name"
+            select-label="Välj märke"
+            selected-label="Vald"
+            deselect-label="Ta bort"
+            group-values="badges"
+            group-label="ageGroup"
+            :group-select="false"
+            :multiple="true"
+            :close-on-select="false"
+            placeholder="Välj deltagandemärke/märken..."
+            track-by="name"
+          ></Multiselect>
+        </div>
+
+        <button @click="addBadge()" class="formButton" id="addBadgeButton">
+          Lägg till märken
+        </button>
+        <div class="table">
+          <b-table
+            class="patrolTable"
+            striped
+            hover
+            :items="patrols.scouts"
+            :fields="fields"
+          >
+          </b-table>
+        </div>
       </div>
     </div>
+
     <div class="fyllnad"></div>
   </div>
 </template>
 
 <script>
-import patrols from "../data/patrols";
+import patrolsData from "../data/patrols";
 import intresse from "../data/intresse";
 import bevis from "../data/bevis";
 import deltagandeSparare from "../data/deltagandeSparare";
@@ -48,7 +115,16 @@ export default {
 
   data() {
     return {
-      options: bevis,
+      // Anger vilka märken som man ska kunna välja ifrån i drop-downen, Deltagande har grupper inom drop-downen
+      optionsBevis: bevis,
+      optionsIntresse: intresse,
+      optionsDeltagande: [
+        { ageGroup: "Spårare", badges: deltagandeSparare },
+        { ageGroup: "Upptäckare", badges: deltagandeUpptackare },
+        { ageGroup: "Äventyrare", badges: deltagandeAventyrare },
+        { ageGroup: "Utmanare", badges: deltagandeUtmanare },
+        { ageGroup: "Rover", badges: deltagandeRover }
+      ],
 
       intresse: intresse,
       bevis: bevis,
@@ -58,23 +134,59 @@ export default {
       deltagandeUtmanare: deltagandeUtmanare,
       deltagandeRover: deltagandeRover,
 
-      patrols: patrols[0],
-
+      // Bestämmer vilka kolumner och vad de ska innehålla i table
       fields: [
         { key: "name", label: "Scout" },
         {
-          key: "badges.length",
-          label: "Antal märken"
+          key: "badgesBevis.length",
+          label: "Bevismärken ( /3)"
+        },
+        {
+          key: "badgesIntresse.length",
+          label: "Intressemärken ( /43)"
+        },
+        {
+          key: "badgesDeltagande.length",
+          label: "Deltagandemärken ( /32)"
         }
       ],
-      value: []
+
+      // Array med de märken man väljer att lägga till
+      valueScout: [],
+      valueBevis: [],
+      valueIntresse: [],
+      valueDeltagande: []
     };
   },
+  computed: {
+    patrols() {
+      // Hittar rätt patrull i arrayen med hjälp av patrullnamnet
+      return patrolsData.find(
+        p => p.patrolName === this.$route.params.patrolName
+      );
+    }
+  },
+
+  mounted() {},
 
   methods: {
     addBadge() {
-      patrols[0].scouts[0].badges.push({ id: "klura" }, { id: "matettan" });
-      console.log(patrols[0].scouts[0].badges);
+      // Lägger till de valda märkena i den valda scoutens märkes-arrayer
+      this.valueScout.badgesBevis = this.valueScout.badgesBevis.concat(
+        this.valueBevis
+      );
+      this.valueScout.badgesIntresse = this.valueScout.badgesIntresse.concat(
+        this.valueIntresse
+      );
+      this.valueScout.badgesDeltagande = this.valueScout.badgesDeltagande.concat(
+        this.valueDeltagande
+      );
+
+      // Reset value efter knappen är tryckt
+      this.valueScout = null;
+      this.valueBevis = null;
+      this.valueIntresse = null;
+      this.valueDeltagande = null;
     }
   }
 };
@@ -84,10 +196,29 @@ export default {
 
 <style>
 .selectBadges {
-  width: 85%;
+  width: 100%;
+  text-align: center;
+  margin: 10px auto 25px auto;
+}
+
+.addBadgeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 5%;
+}
+
+.formBadgeGroup {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+#addBadgeButton {
+  margin: 10px auto 0 auto;
   text-align: center;
-  padding: 20px;
 }
 </style>

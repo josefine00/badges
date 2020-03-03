@@ -136,6 +136,14 @@
             <b-button type="reset" class="formButton" id="formReset">
               Återställ
             </b-button>
+
+            <button
+              type="button"
+              class="formButton"
+              @click="togglePatrolForm()"
+            >
+              Stäng
+            </button>
           </b-form>
         </section>
       </div>
@@ -180,6 +188,9 @@ export default {
           { scoutName5: "" },
           { scoutName6: "" }
         ],
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: [],
         patrols: patrols
       },
 
@@ -218,16 +229,19 @@ export default {
         scoutName3,
         scoutName4,
         scoutName5,
-        scoutName6
+        scoutName6,
+        badgesBevis,
+        badgesIntresse,
+        badgesDeltagande
       } = this.formData;
 
       const scouts = [
-        { name: scoutName1 },
-        { name: scoutName2 },
-        { name: scoutName3 },
-        { name: scoutName4 },
-        { name: scoutName5 },
-        { name: scoutName6 }
+        { name: scoutName1, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName2, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName3, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName4, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName5, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName6, badgesBevis, badgesIntresse, badgesDeltagande }
       ];
 
       const filteredScouts = scouts.filter(scout => scout.name != undefined);
@@ -264,8 +278,8 @@ export default {
 .formButton {
   margin: 1rem;
   background-color: rgb(0, 54, 96);
-  border-color: rgb(0, 54, 96);
-  padding: 0.5rem;
+  border: none;
+  padding: 0.7rem;
   border-radius: 10px;
   color: white;
 }

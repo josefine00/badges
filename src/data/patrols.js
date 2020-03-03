@@ -3,19 +3,23 @@ const patrols = [
     patrolName: "Vargarna",
     patrolAge: "Äventyrare",
     scouts: [
-      { name: "Ellen", badges: [{ id: "int-lara" }, { id: "int-lyssna" }] },
+      {
+        name: "Ellen",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
       {
         name: "Sanna",
-        badges: [
-          { id: "klura" },
-          { id: "skapa" },
-          { id: "plastra" },
-          { id: "morker" }
-        ]
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
       },
       {
         name: "Amanda",
-        badges: [{ id: "spela" }, { id: "filma" }, { id: "forsta-rep" }]
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
       }
     ]
   },
@@ -23,21 +27,66 @@ const patrols = [
     patrolName: "Uttrarna",
     patrolAge: "Upptäckare",
     scouts: [
-      { name: "Leo" },
-      { name: "Indra" },
-      { name: "Cian" },
-      { name: "Annie" },
-      { name: "Alwin" }
+      {
+        name: "Leo",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Indra",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Cian",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Annie",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Alwin",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      }
     ]
   },
   {
     patrolName: "Hökarna",
     patrolAge: "Spårare",
     scouts: [
-      { name: "Emil" },
-      { name: "Mollie" },
-      { name: "Alice" },
-      { name: "Nils" }
+      {
+        name: "Emil",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Mollie",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Alice",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      },
+      {
+        name: "Nils",
+        badgesBevis: [],
+        badgesIntresse: [],
+        badgesDeltagande: []
+      }
     ]
   }
 ];
