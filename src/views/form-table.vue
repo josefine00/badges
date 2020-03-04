@@ -310,7 +310,9 @@ export default {
 }
 
 .table {
-  width: 100%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 5%;
   padding-bottom: 20px;
 }
