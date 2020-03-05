@@ -1,6 +1,18 @@
 <template>
   <div>
-    <h1 class="sideName">{{ $route.params.patrolName }}</h1>
+    <div class="badgeList-header">
+      <img
+        :src="checkAgeGroupLogo()"
+        :alt="patrols.patrolAge"
+        class="ageGroupLogo"
+      />
+      <h1>{{ patrols.patrolName }}</h1>
+      <img
+        :src="checkAgeGroupLogo()"
+        :alt="patrols.patrolAge"
+        class="ageGroupLogo"
+      />
+    </div>
 
     <div v-for="scout in patrols.scouts" v-bind:key="scout.name">
       <b-modal
@@ -8,6 +20,7 @@
         centered
         :id="scout.name"
         :title="scout.name"
+        :hide-footer="true"
       >
         <div class="badgeList-gallery">
           <h5
@@ -246,8 +259,7 @@
 
           <div class="line-left">
             <button @click="addBadge()" class="formButton" id="addBadgeButton">
-              Lägg till märken
-              <!-- {{ checkName() }} -->
+              {{ checkName }}
             </button>
           </div>
         </div>
@@ -336,7 +348,7 @@ export default {
       ],
 
       // Array med de märken man väljer att lägga till
-      valueScout: [],
+      valueScout: null,
       valueBevis: [],
       valueIntresse: [],
       valueDeltagande: []
@@ -345,14 +357,16 @@ export default {
   computed: {
     patrols() {
       // Hittar rätt patrull i arrayen med hjälp av patrullnamnet
-      return patrolsData.find(
-        p =>
-          p.patrolName ===
-          this.$route.params
-            .patrolName /*&&
-          p.patrolAge === this.$route.params.patrolAge &&
-          p.scouts === this.$route.params.scouts*/
-      );
+      return patrolsData.find(p => p.id == this.$route.params.patrolId);
+    },
+
+    checkName() {
+      // Ändrar texten på knappen för att lägga till märke till scout
+      if (this.valueScout && this.valueScout.name) {
+        return "Lägg till märken till " + this.valueScout.name;
+      } else {
+        return "Lägg till märken";
+      }
     }
   },
 
@@ -362,51 +376,59 @@ export default {
     addBadge() {
       // Lägger till de valda märkena i den valda scoutens märkes-arrayer
 
-      /*
-      this.valueScout.badgesBevis.forEach(badge => {
-        if (!this.valueScout.badgesBevis.includes(badge)) {
-          this.valueScout.badgesBevis = this.valueScout.badgesBevis.concat(
-            this.valueBevis
-          );
+      this.valueBevis.map(badge => {
+        if (this.valueScout.badgesBevis.filter(b => b.id === badge.id).length) {
+          console.log(badge.name + " exists");
+        } else {
+          this.valueScout.badgesBevis.push(badge);
         }
       });
-*/
-      if (this.valueBevis.length >= 1) {
-        this.valueScout.badgesBevis = this.valueScout.badgesBevis.concat(
-          this.valueBevis
-        );
-      } else {
-        this.valueScout.badgesBevis = this.valueScout.badgesBevis;
-      }
 
-      if (this.valueIntresse.length >= 1) {
-        this.valueScout.badgesIntresse = this.valueScout.badgesIntresse.concat(
-          this.valueIntresse
-        );
-      } else {
-        this.valueScout.badgesIntresse = this.valueScout.badgesIntresse;
-      }
+      this.valueIntresse.map(badge => {
+        if (
+          this.valueScout.badgesIntresse.filter(b => b.id === badge.id).length
+        ) {
+          console.log(badge.name + " exists");
+        } else {
+          this.valueScout.badgesIntresse.push(badge);
+        }
+      });
 
-      if (this.valueDeltagande.length >= 1) {
-        this.valueScout.badgesDeltagande = this.valueScout.badgesDeltagande.concat(
-          this.valueDeltagande
-        );
-      } else {
-        this.valueScout.badgesDeltagande = this.valueScout.badgesDeltagande;
-      }
+      this.valueDeltagande.map(badge => {
+        if (
+          this.valueScout.badgesDeltagande.filter(b => b.id === badge.id).length
+        ) {
+          console.log(badge.name + " exists");
+        } else {
+          this.valueScout.badgesDeltagande.push(badge);
+        }
+      });
 
       // Reset value efter knappen är tryckt
       this.valueScout = null;
-      this.valueBevis = null;
-      this.valueIntresse = null;
-      this.valueDeltagande = null;
+      this.valueBevis = [];
+      this.valueIntresse = [];
+      this.valueDeltagande = [];
     },
 
-    checkName() {
-      if (this.valueScout.name) {
-        return "Lägg till märken till " + this.valueScout.name;
-      } else {
-        return "Lägg till märken";
+    checkAgeGroupLogo() {
+      // Lägger till åldersgruppens logga vid patrullnamnet på toppen av sidan
+      if (
+        this.patrols.patrolAge === "Familjescouter" ||
+        this.patrols.patrolAge === "Ledare" ||
+        this.patrols.patrolAge === "Övriga"
+      ) {
+        return "scoutsymbolen-vit.png";
+      } else if (this.patrols.patrolAge === "Spårare") {
+        return "sparare.png";
+      } else if (this.patrols.patrolAge === "Upptäckare") {
+        return "upptackare.png";
+      } else if (this.patrols.patrolAge === "Äventyrare") {
+        return "aventyrare.png";
+      } else if (this.patrols.patrolAge === "Utmanare") {
+        return "utmanare.png";
+      } else if (this.patrols.patrolAge === "Rover") {
+        return "rover.png";
       }
     }
   }
@@ -420,6 +442,22 @@ export default {
   width: 100%;
   text-align: center;
   margin: 10px auto 25px auto;
+}
+
+.badgeList-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 54, 96);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 25px;
 }
 
 .addBadgeForm {
@@ -498,6 +536,10 @@ export default {
   cursor: default;
 }
 
+.badge-badgeList .b-card p {
+  font-size: 1.05rem;
+}
+
 .badgeList-gallery {
   display: flex;
   flex-direction: row;
@@ -511,14 +553,15 @@ export default {
 }
 
 .badgeList-gallery .badge {
-  width: 30%;
+  width: 33%;
 }
 
 .badgeList-desc {
   width: 100%;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 5px;
   text-align: left;
+  border-bottom: solid 5px rgb(0, 54, 96);
 }
 
 .multiselect__element {

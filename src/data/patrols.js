@@ -1,5 +1,6 @@
 const patrols = [
   {
+    id: 0,
     patrolName: "Vargarna",
     patrolAge: "Äventyrare",
     scouts: [
@@ -24,6 +25,7 @@ const patrols = [
     ]
   },
   {
+    id: 1,
     patrolName: "Uttrarna",
     patrolAge: "Upptäckare",
     scouts: [
@@ -60,6 +62,7 @@ const patrols = [
     ]
   },
   {
+    id: 2,
     patrolName: "Hökarna",
     patrolAge: "Spårare",
     scouts: [

@@ -35,7 +35,7 @@ const routes = [
     component: FormTable
   },
   {
-    path: "/patruller/:patrolName",
+    path: "/patruller/:patrolId",
     name: "patrolName",
     component: Patrol
   }

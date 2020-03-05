@@ -129,6 +129,58 @@
               </b-form-input>
             </b-form-group>
 
+            <b-form-group
+              id="ScoutNameGroup7"
+              label="Scout 7 namn:"
+              label-for="ScoutName7"
+            >
+              <b-form-input
+                id="scoutName7"
+                v-model="formData.scoutName7"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup8"
+              label="Scout 8 namn:"
+              label-for="ScoutName8"
+            >
+              <b-form-input
+                id="scoutName8"
+                v-model="formData.scoutName8"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup9"
+              label="Scout 9 namn:"
+              label-for="ScoutName9"
+            >
+              <b-form-input
+                id="scoutName9"
+                v-model="formData.scoutName9"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
+            <b-form-group
+              id="ScoutNameGroup10"
+              label="Scout 10 namn:"
+              label-for="ScoutName10"
+            >
+              <b-form-input
+                id="scoutName10"
+                v-model="formData.scoutName10"
+                placeholder="Skriv scoutens namn..."
+              >
+              </b-form-input>
+            </b-form-group>
+
             <b-button type="submit" class="formButton" id="formSubmit">
               Spara
             </b-button>
@@ -157,7 +209,7 @@
           :fields="fields"
         >
           <template v-slot:cell(patrolName)="data"
-            ><router-link :to="`/patruller/${data.item.patrolName}`">{{
+            ><router-link :to="`/patruller/${data.item.id}`">{{
               data.item.patrolName
             }}</router-link>
           </template>
@@ -186,7 +238,11 @@ export default {
           { scoutName3: "" },
           { scoutName4: "" },
           { scoutName5: "" },
-          { scoutName6: "" }
+          { scoutName6: "" },
+          { scoutName7: "" },
+          { scoutName8: "" },
+          { scoutName9: "" },
+          { scoutName10: "" }
         ],
         badgesBevis: [],
         badgesIntresse: [],
@@ -230,6 +286,10 @@ export default {
         scoutName4,
         scoutName5,
         scoutName6,
+        scoutName7,
+        scoutName8,
+        scoutName9,
+        scoutName10,
         badgesBevis,
         badgesIntresse,
         badgesDeltagande
@@ -241,7 +301,11 @@ export default {
         { name: scoutName3, badgesBevis, badgesIntresse, badgesDeltagande },
         { name: scoutName4, badgesBevis, badgesIntresse, badgesDeltagande },
         { name: scoutName5, badgesBevis, badgesIntresse, badgesDeltagande },
-        { name: scoutName6, badgesBevis, badgesIntresse, badgesDeltagande }
+        { name: scoutName6, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName7, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName8, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName9, badgesBevis, badgesIntresse, badgesDeltagande },
+        { name: scoutName10, badgesBevis, badgesIntresse, badgesDeltagande }
       ];
 
       const filteredScouts = scouts.filter(scout => scout.name != undefined);
@@ -265,7 +329,11 @@ export default {
           { scoutName3: "" },
           { scoutName4: "" },
           { scoutName5: "" },
-          { scoutName6: "" }
+          { scoutName6: "" },
+          { scoutName7: "" },
+          { scoutName8: "" },
+          { scoutName9: "" },
+          { scoutName10: "" }
         ]
       };
       this.showPatrolForm = !this.showPatrolForm;
@@ -280,6 +348,8 @@ export default {
   background-color: rgb(0, 54, 96);
   border: none;
   padding: 0.7rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   border-radius: 10px;
   color: white;
 }
