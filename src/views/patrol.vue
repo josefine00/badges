@@ -31,11 +31,11 @@
             "
           >
             {{ scout.name }} har inga märken än. Lägg till märken i formuläret
-            ovan.
+            nedan.
           </h5>
-          <h3 v-if="scout.badgesBevis.length >= 1" class="badgeList-desc">
+          <h4 v-if="scout.badgesBevis.length >= 1" class="badgeList-desc">
             Bevismärken
-          </h3>
+          </h4>
           <div
             role="tablist"
             v-for="bevis in scout.badgesBevis"
@@ -54,9 +54,9 @@
             </b-card>
           </div>
 
-          <h3 v-if="scout.badgesIntresse.length >= 1" class="badgeList-desc">
+          <h4 v-if="scout.badgesIntresse.length >= 1" class="badgeList-desc">
             Intressemärken
-          </h3>
+          </h4>
           <div
             role="tablist"
             v-for="intresse in scout.badgesIntresse"
@@ -75,9 +75,9 @@
             </b-card>
           </div>
 
-          <h3 v-if="scout.badgesDeltagande.length >= 1" class="badgeList-desc">
+          <h4 v-if="scout.badgesDeltagande.length >= 1" class="badgeList-desc">
             Deltagandemärken
-          </h3>
+          </h4>
           <div
             role="tablist"
             v-for="deltagande in scout.badgesDeltagande"
@@ -100,6 +100,22 @@
     </div>
 
     <div class="gallery">
+      <div class="table badgeList-table">
+        <b-table
+          class="patrolTable"
+          striped
+          hover
+          :responsive="true"
+          :items="patrols.scouts"
+          :fields="fields"
+        >
+          <template v-slot:cell(name)="data">
+            <a id="openModalLink" v-b-modal="data.item.name">
+              {{ data.item.name }}
+            </a>
+          </template>
+        </b-table>
+      </div>
       <div class="addBadgeForm">
         <div class="info-badge">
           <div class="line-left">
@@ -262,23 +278,6 @@
               {{ checkName }}
             </button>
           </div>
-        </div>
-
-        <div class="table">
-          <b-table
-            class="patrolTable"
-            striped
-            hover
-            :responsive="true"
-            :items="patrols.scouts"
-            :fields="fields"
-          >
-            <template v-slot:cell(name)="data">
-              <a id="openModalLink" v-b-modal="data.item.name">
-                {{ data.item.name }}
-              </a>
-            </template>
-          </b-table>
         </div>
       </div>
       <button class="formButton backButton">
@@ -458,6 +457,12 @@ export default {
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 25px;
+  height: 80px;
+}
+
+.badgeList-table {
+  margin-top: 0;
+  padding-bottom: 0;
 }
 
 .addBadgeForm {

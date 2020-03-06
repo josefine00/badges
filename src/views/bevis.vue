@@ -3,13 +3,15 @@
     <h1 class="sideName">Bevismärken</h1>
     <div class="bevis gallery" id="bevis">
       <div class="info-badge">
-        <h5 class="line-left">
-          Bevismärkena skiljer sig från intressemärkena genom att de har
-          tydligare riktlinjer för vad du ska göra och klara av. Det är för att
-          man ska veta att alla scouter som har tagit ett bevismärke kan klara
-          av samma saker. Bevismärkena blir på så sätt en bekräftelse på att du
-          kan något och en påminnelse om den kunskap du fått.
-        </h5>
+        <div class="line-left">
+          <h5>
+            Bevismärkena skiljer sig från intressemärkena genom att de har
+            tydligare riktlinjer för vad du ska göra och klara av. Det är för
+            att man ska veta att alla scouter som har tagit ett bevismärke kan
+            klara av samma saker. Bevismärkena blir på så sätt en bekräftelse på
+            att du kan något och en påminnelse om den kunskap du fått.
+          </h5>
+        </div>
       </div>
       <div
         role="tablist"
@@ -77,6 +79,7 @@ export default {
 <style>
 .bevis .badgeinfo {
   width: 250%;
+  margin-bottom: 5%;
 }
 
 #bevis {

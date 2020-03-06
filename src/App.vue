@@ -157,8 +157,13 @@
   width: 300%;
   margin-left: 50%;
   margin-right: 50%;
+  margin-bottom: 5%;
   background-color: #ececec;
   border-radius: 25px;
+}
+
+.badgeinfo p {
+  font-size: 1.3rem;
 }
 
 .badgeinfo ul {
@@ -174,7 +179,7 @@
 
 .badgeinfo li {
   float: left;
-  font-size: 1.4em;
+  font-size: 1.6em;
   word-wrap: break-word;
 }
 .ageGroup {
@@ -224,7 +229,7 @@ h1 {
 }
 
 .line-left {
-  border-left: solid 5px rgb(0, 54, 96);
+  border-left: solid 3px rgb(0, 54, 96);
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;

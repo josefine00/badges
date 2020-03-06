@@ -3,27 +3,30 @@
     <h1 class="sideName">Intressemärken</h1>
     <div class="intresse gallery">
       <div class="info-badge">
-        <h5 class="line-left">
-          Intressemärkena är främst tänkta för de två-tre yngre åldersgrupperna
-          och för varje märke finns en rekommendation om vilken ålder det lämpar
-          sig bäst för. Se det just som rekommendationer, du känner dina scouter
-          bäst själv och tillsammans avgör ni vad ni vill jobba med och när.
-        </h5>
+        <div class="line-left">
+          <h5>
+            Intressemärkena är främst tänkta för de två-tre yngre
+            åldersgrupperna och för varje märke finns en rekommendation om
+            vilken ålder det lämpar sig bäst för. Se det just som
+            rekommendationer, du känner dina scouter bäst själv och tillsammans
+            avgör ni vad ni vill jobba med och när.
+          </h5>
 
-        <h5 class="line-left">
-          Beroende på vilka scouter som är intresserade av vilka intressemärken
-          kan det ibland också passa bra att bryta de vanliga patrullerna och
-          bilda nya grupperingar tillfälligt. Till exempel kan alla som har en
-          viss roll i varje patrull tillsammans jobba med ett märke som rör
-          deras ansvarsområde.
-        </h5>
+          <h5>
+            Beroende på vilka scouter som är intresserade av vilka
+            intressemärken kan det ibland också passa bra att bryta de vanliga
+            patrullerna och bilda nya grupperingar tillfälligt. Till exempel kan
+            alla som har en viss roll i varje patrull tillsammans jobba med ett
+            märke som rör deras ansvarsområde.
+          </h5>
 
-        <h5 class="line-left">
-          Programmet för ett intressemärke sträcker sig över ett par scoutmöten,
-          vissa kan man behöva arbeta med av och till under en hel termin. Vissa
-          märken finns i flera nivåer men det är inget krav att ha det första
-          märket innan man får det andra.
-        </h5>
+          <h5>
+            Programmet för ett intressemärke sträcker sig över ett par
+            scoutmöten, vissa kan man behöva arbeta med av och till under en hel
+            termin. Vissa märken finns i flera nivåer men det är inget krav att
+            ha det första märket innan man får det andra.
+          </h5>
+        </div>
       </div>
       <div
         role="tablist"

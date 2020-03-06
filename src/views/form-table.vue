@@ -394,5 +394,6 @@ export default {
 #addPatrolButton {
   margin-left: 25%;
   margin-right: 25%;
+  margin-top: 5%;
 }
 </style>

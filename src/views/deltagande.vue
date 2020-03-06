@@ -3,17 +3,19 @@
     <h1 class="sideName">Deltagandemärken</h1>
     <div class="deltagande gallery">
       <div class="info-badge">
-        <h5 class="line-left">
-          Deltagandemärken delas ut till Scouter som har varit med i ett projekt
-          en termin eller ett läger. Dessa märken skiljer sig från varandra
-          beroende på vilken åldersgrupp du tillhör samt olika intressen och ju
-          äldre du blir, desto större möjlighet har du att engagera dig och bli
-          tilldelad fler märken.
-        </h5>
-        <h5 class="line-left">
-          Ett deltagandemärke är ett minne av de upplevelser ni har haft
-          tillsammans i patrullen.
-        </h5>
+        <div class="line-left">
+          <h5>
+            Deltagandemärken delas ut till Scouter som har varit med i ett
+            projekt en termin eller ett läger. Dessa märken skiljer sig från
+            varandra beroende på vilken åldersgrupp du tillhör samt olika
+            intressen och ju äldre du blir, desto större möjlighet har du att
+            engagera dig och bli tilldelad fler märken.
+          </h5>
+          <h5>
+            Ett deltagandemärke är ett minne av de upplevelser ni har haft
+            tillsammans i patrullen.
+          </h5>
+        </div>
       </div>
       <div class="delt sparare">
         <div class="deltagande-header">
@@ -52,6 +54,8 @@
           </div>
         </div>
       </div>
+
+      <div class="line"></div>
 
       <div class="delt upptackare">
         <div class="deltagande-header">
@@ -97,6 +101,8 @@
           </div>
         </div>
       </div>
+
+      <div class="line"></div>
 
       <div class="delt aventyrare">
         <div class="deltagande-header">
@@ -144,6 +150,8 @@
         </div>
       </div>
 
+      <div class="line"></div>
+
       <div class="delt utmanare">
         <div class="deltagande-header">
           <img src="utmanare.png" alt="Utmanarsymbolen" class="ageGroupLogo" />
@@ -181,6 +189,8 @@
           </div>
         </div>
       </div>
+
+      <div class="line"></div>
 
       <div class="delt rover">
         <div class="deltagande-header">
@@ -253,6 +263,14 @@ export default {
 
 .sparare {
   width: 100%;
+}
+
+.line {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border-bottom: 3px solid rgb(0, 54, 96);
 }
 
 .deltagande-gallery img {
