@@ -1,27 +1,33 @@
 <template>
   <div id="app">
-    <div class="header">
-      <img
-        class="scoutsymbol-header"
-        src="../public/scoutsymbolen-bla.png"
-        alt="Scoutsymbolen"
-      />
-      <h1>Scoutmärken</h1>
-      <img
-        class="scoutsymbol-header"
-        src="../public/scoutsymbolen-bla.png"
-        alt="Scoutsymbolen"
-      />
+    <div class="header" id="header">
+      <div class="header-text">
+        <img
+          class="scoutsymbol-header"
+          src="../public/scoutsymbolen-bla.png"
+          alt="Scoutsymbolen"
+        />
+        <h1>Scoutmärken</h1>
+        <img
+          class="scoutsymbol-header"
+          src="../public/scoutsymbolen-bla.png"
+          alt="Scoutsymbolen"
+        />
+      </div>
     </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <div class="nav-bar" id="nav">
       <ul>
-        <li>
+        <!--<li>
           <a>
             <router-link to="/">
               <img src="../public/scoutsymbolen-vit.png" class="scoutsymbol" />
             </router-link>
           </a>
-        </li>
+        </li>-->
         <li>
           <a>
             <router-link to="/">Hem</router-link>
@@ -47,11 +53,32 @@
             <router-link to="/patruller">Patruller</router-link>
           </a>
         </li>
+        <li class="icon">
+          <a href="javascript:void(0);" @click="toggleNav">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
       </ul>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleNav() {
+      console.log("toggleNav");
+      var x = document.getElementById("nav");
+      if (x.className === "nav-bar") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav-bar";
+      }
+    }
+  }
+};
+</script>
 
 <style>
 #app {
@@ -86,10 +113,21 @@
   text-decoration: none;
 }
 
-.nav-bar li a:hover {
+.nav-bar li:hover {
   background-color: rgb(0, 33, 58);
   text-decoration: none;
   color: white;
+}
+
+.nav-bar li a:active {
+  background-color: rgb(0, 33, 58);
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar .icon {
+  display: none;
+  padding: 8px;
 }
 
 .scoutsymbol {
@@ -109,6 +147,21 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-image: url("Alla-marken-smal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(236, 236, 236, 0.8);
+  border-radius: 25px;
+  padding: 0 5% 0 5%;
 }
 
 .sideName {
@@ -242,13 +295,40 @@ h1 {
 }
 
 .fyllnad {
-  padding: 200px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar li:not(:first-child) {
+    display: none;
+  }
+
+  .nav-bar li.icon {
+    float: right;
+    display: block;
+  }
+
+  .nav-bar {
+    position: relative;
+  }
+
+  .nav-bar li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav-bar.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -261,6 +341,14 @@ h1 {
 
   .badge {
     max-width: 50%;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .addPatrol {
+    width: 75%;
   }
 }
 </style>

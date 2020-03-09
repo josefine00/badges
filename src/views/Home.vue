@@ -6,6 +6,11 @@
         <div class="button-div">
           <div class="line-left">
             <h2>Intressemärken</h2>
+            <img
+              class="img-button-div"
+              src="Intressemarken-smal.png"
+              alt="Intressemärken"
+            />
             <h5>
               Intressemärkena är främst tänkta för de två-tre yngre
               åldersgrupperna och för varje märke finns en rekommendation om
@@ -36,6 +41,11 @@
         <div class="button-div">
           <div class="line-left">
             <h2>Bevismärken</h2>
+            <img
+              class="img-button-div"
+              src="Bevismarken-smal.png"
+              alt="Bevismärken"
+            />
             <h5>
               Bevismärkena skiljer sig från intressemärkena genom att de har
               tydligare riktlinjer för vad du ska göra och klara av. Det är för
@@ -51,6 +61,11 @@
         <div class="button-div">
           <div class="line-left">
             <h2>Deltagandemärken</h2>
+            <img
+              class="img-button-div"
+              src="Deltagandemarken-smal.png"
+              alt="Deltagandemärken"
+            />
             <h5>
               Deltagandemärken delas ut till Scouter som har varit med i ett
               projekt en termin eller ett läger. Dessa märken skiljer sig från
@@ -70,6 +85,11 @@
         <div class="button-div" id="scoutshop-div">
           <div class="line-left">
             <h2>Beställ märken</h2>
+            <img
+              class="img-button-div"
+              src="Alla-marken-smal.png"
+              alt="Hög av märken"
+            />
             <h5>
               För att beställa märken går du till Scoutshopen. Där kan du även
               hitta ännu fler roliga prylar och märken.
@@ -98,6 +118,7 @@ export default {
   text-align: left;
   background-color: #ececec;
   border-radius: 25px;
+  width: 40%;
 }
 
 .button-div h5 {
@@ -108,8 +129,8 @@ export default {
 .img-button-div {
   width: 100%;
   height: auto;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .div-flex {

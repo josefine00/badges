@@ -12,174 +12,188 @@
         </button>
         <section id="addPatrol" class="addPatrol">
           <b-form @submit.prevent="handleSubmit" v-if="showPatrolForm">
-            <b-form-group
-              id="PatrolNameGroup"
-              label="Patrullens namn:"
-              label-for="PatrolName"
-            >
-              <b-form-input
-                id="patrolName"
-                type="text"
-                v-model="formData.patrolName"
-                required
-                placeholder="Skriv patrullens namn..."
+            <div class="patrolFormInputs">
+              <b-form-group
+                class="form-group"
+                id="PatrolNameGroup"
+                label="Patrullens namn:"
+                label-for="PatrolName"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="patrolName"
+                  type="text"
+                  v-model="formData.patrolName"
+                  required
+                  placeholder="Skriv patrullens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="PatrolAgeGroup"
-              label="Åldersgrupp:"
-              label-for="PatrolAge"
-            >
-              <b-form-select
-                id="patrolAge"
-                v-model="formData.patrolAge"
-                placeholder="Välj patrullens åldersgrupp..."
-                required
-                :options="[
-                  'Familjescouter',
-                  'Spårare',
-                  'Upptäckare',
-                  'Äventyrare',
-                  'Utmanare',
-                  'Rover',
-                  'Ledare',
-                  'Övriga'
-                ]"
-              ></b-form-select>
-            </b-form-group>
-
-            <b-form-group
-              id="ScoutNameGroup1"
-              label="Scout 1 namn:"
-              label-for="ScoutName1"
-            >
-              <b-form-input
-                id="scoutName1"
-                v-model="formData.scoutName1"
-                required
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="PatrolAgeGroup"
+                label="Åldersgrupp:"
+                label-for="PatrolAge"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-select
+                  id="patrolAge"
+                  v-model="formData.patrolAge"
+                  placeholder="Välj patrullens åldersgrupp..."
+                  required
+                  :options="[
+                    'Familjescouter',
+                    'Spårare',
+                    'Upptäckare',
+                    'Äventyrare',
+                    'Utmanare',
+                    'Rover',
+                    'Ledare',
+                    'Övriga'
+                  ]"
+                ></b-form-select>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup2"
-              label="Scout 2 namn:"
-              label-for="ScoutName2"
-            >
-              <b-form-input
-                id="scoutName2"
-                v-model="formData.scoutName2"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup1"
+                label="Scout 1 namn:"
+                label-for="ScoutName1"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName1"
+                  v-model="formData.scoutName1"
+                  required
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup3"
-              label="Scout 3 namn:"
-              label-for="ScoutName3"
-            >
-              <b-form-input
-                id="scoutName3"
-                v-model="formData.scoutName3"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup2"
+                label="Scout 2 namn:"
+                label-for="ScoutName2"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName2"
+                  v-model="formData.scoutName2"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup4"
-              label="Scout 4 namn:"
-              label-for="ScoutName4"
-            >
-              <b-form-input
-                id="scoutName4"
-                v-model="formData.scoutName4"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup3"
+                label="Scout 3 namn:"
+                label-for="ScoutName3"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName3"
+                  v-model="formData.scoutName3"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup5"
-              label="Scout 5 namn:"
-              label-for="ScoutName5"
-            >
-              <b-form-input
-                id="scoutName5"
-                v-model="formData.scoutName5"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup4"
+                label="Scout 4 namn:"
+                label-for="ScoutName4"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName4"
+                  v-model="formData.scoutName4"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup6"
-              label="Scout 6 namn:"
-              label-for="ScoutName6"
-            >
-              <b-form-input
-                id="scoutName6"
-                v-model="formData.scoutName6"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup5"
+                label="Scout 5 namn:"
+                label-for="ScoutName5"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName5"
+                  v-model="formData.scoutName5"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup7"
-              label="Scout 7 namn:"
-              label-for="ScoutName7"
-            >
-              <b-form-input
-                id="scoutName7"
-                v-model="formData.scoutName7"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup6"
+                label="Scout 6 namn:"
+                label-for="ScoutName6"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName6"
+                  v-model="formData.scoutName6"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup8"
-              label="Scout 8 namn:"
-              label-for="ScoutName8"
-            >
-              <b-form-input
-                id="scoutName8"
-                v-model="formData.scoutName8"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup7"
+                label="Scout 7 namn:"
+                label-for="ScoutName7"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName7"
+                  v-model="formData.scoutName7"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup9"
-              label="Scout 9 namn:"
-              label-for="ScoutName9"
-            >
-              <b-form-input
-                id="scoutName9"
-                v-model="formData.scoutName9"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup8"
+                label="Scout 8 namn:"
+                label-for="ScoutName8"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName8"
+                  v-model="formData.scoutName8"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
 
-            <b-form-group
-              id="ScoutNameGroup10"
-              label="Scout 10 namn:"
-              label-for="ScoutName10"
-            >
-              <b-form-input
-                id="scoutName10"
-                v-model="formData.scoutName10"
-                placeholder="Skriv scoutens namn..."
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup9"
+                label="Scout 9 namn:"
+                label-for="ScoutName9"
               >
-              </b-form-input>
-            </b-form-group>
+                <b-form-input
+                  id="scoutName9"
+                  v-model="formData.scoutName9"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
+
+              <b-form-group
+                class="form-group"
+                id="ScoutNameGroup10"
+                label="Scout 10 namn:"
+                label-for="ScoutName10"
+              >
+                <b-form-input
+                  id="scoutName10"
+                  v-model="formData.scoutName10"
+                  placeholder="Skriv scoutens namn..."
+                >
+                </b-form-input>
+              </b-form-group>
+            </div>
 
             <b-button type="submit" class="formButton" id="formSubmit">
               Spara
@@ -362,6 +376,14 @@ export default {
 .formButton:active {
   background-color: rgb(0, 33, 58);
   border-color: rgb(0, 33, 58);
+}
+
+.patrolFormInputs {
+  text-align: left;
+}
+
+.patrolFormInputs .form-group {
+  padding-bottom: 10px;
 }
 
 .form {

@@ -369,8 +369,6 @@ export default {
     }
   },
 
-  mounted() {},
-
   methods: {
     addBadge() {
       // Lägger till de valda märkena i den valda scoutens märkes-arrayer
