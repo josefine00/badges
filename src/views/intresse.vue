@@ -268,6 +268,14 @@ export default {
   margin-left: -152%;
 }
 
+#superhjalte {
+  margin-left: -255.4%;
+}
+
+#din-rost {
+  margin-left: 55%;
+}
+
 @media only screen and (max-width: 600px) {
   #int-lara {
     width: 185%;
@@ -479,6 +487,16 @@ export default {
   }
 
   #morker {
+    width: 185%;
+    margin-left: 9.7%;
+  }
+
+  #superhjalte {
+    width: 185%;
+    margin-left: -94.9%;
+  }
+
+  #din-rost {
     width: 185%;
     margin-left: -42.5%;
   }

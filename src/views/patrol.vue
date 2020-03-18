@@ -338,7 +338,7 @@ export default {
         },
         {
           key: "badgesIntresse.length",
-          label: "Intressemärken ( /43)"
+          label: "Intressemärken ( /45)"
         },
         {
           key: "badgesDeltagande.length",

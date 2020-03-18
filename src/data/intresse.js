@@ -1924,6 +1924,86 @@ const intresses = [
       }
     ],
     info: null
+  },
+  {
+    name: "Superhjälte",
+    id: "superhjalte",
+    image: "/assets/Intressemarken/Superhjalte.jpg",
+    ageImage: [
+      { image: "upptackare.png", name: "Upptäckare" },
+      { image: "aventyrare.png", name: "Äventyrare" },
+      { image: "utmanare.png", name: "Utmanare" },
+      { image: "rover.png", name: "Rover" }
+    ],
+    desc:
+      "Intressemärket Superhjälten handlar om att påverka och göra skillnad i stort och i smått. Du får hitta och fördjupa dig i en fråga som du brinner för och se att ditt engagemang kan göra skillnad. Ensam kan du bidra men tillsammans med andra kan du flytta berg. En superhjälte slutar aldrig kämpa för det som den tror på och det gör inte heller scouter.",
+    malspar: null,
+    innehall: "För att få intressemärket Superhjälte ska du: ",
+    list: [
+      {
+        krav:
+          "Tillsammans med din patrull välja ett område eller en fråga där ni vill göra skillnad till exempel klimatfrågan, mobbning, trafiksäkerhet, hälsa, nedskräpning.",
+        listId: "superhjalte-1"
+      },
+      {
+        krav:
+          "Bestämma hur ni ska göra skillnad, till exempel äta mindre kött, säga hej till alla i klassen, cykla tillsammans med kompisar till skolan, plocka skräp.",
+        listId: "superhjalte-2"
+      },
+      {
+        krav:
+          "Göra detta kontinuerligt tillsammans med din patrull under en termin.",
+        listId: "superhjalte-3"
+      },
+      {
+        krav: "Följa upp hur det går och stötta varandra under terminens gång.",
+        listId: "superhjalte-4"
+      },
+      {
+        krav:
+          "I slutet av terminen utvärdera på vilket sätt er insats gjorde skillnad och vilka erfarenheter ni har fått.",
+        listId: "superhjalte-5"
+      }
+    ],
+    info: null
+  },
+  {
+    name: "Din röst",
+    id: "din-rost",
+    image: "/assets/Intressemarken/Din-rost.jpg",
+    ageImage: [
+      { image: "sparare.png", name: "Spårare" },
+      { image: "upptackare.png", name: "Upptäckare" },
+      { image: "aventyrare.png", name: "Äventyrare" },
+      { image: "utmanare.png", name: "Utmanare" },
+      { image: "rover.png", name: "Rover" }
+    ],
+    desc:
+      "Det är viktigt att alla får göra sin röst hörd och bli lyssnade på för att demokrati ska fungera. Demokrati handlar också om att förstå hur olika beslut fattas och hur du kan göra om du vill påverka. Intressemärket Din röst ger dig möjlighet att lära dig mer om demokrati och se hur du kan använda din röst för att vara med och påverka.",
+    malspar: null,
+    innehall: "För att få intressemärket Din röst ska du: ",
+    list: [
+      {
+        krav: "Kunna förklara fem ord som har med demokrati att göra.",
+        listId: "din-rost-1"
+      },
+      {
+        krav:
+          "Prova på att göra din röst hörd genom att delta i en värderingsövning eller en omröstning.",
+        listId: "din-rost-2"
+      },
+      {
+        krav:
+          "Skapa något som visar för andra vad demokrati är. Det kan till exempel vara ett drama, en plansch, en väggtidning eller en installation.",
+        listId: "din-rost-3"
+      },
+      {
+        krav:
+          "Ha deltagit i ett beslutandemöte/årsmöte i patrullen eller på högre nivå i kåren.",
+        listId: "din-rost-4"
+      }
+    ],
+    info: null
   }
 ];
 
