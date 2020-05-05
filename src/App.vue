@@ -68,7 +68,6 @@
 export default {
   methods: {
     toggleNav() {
-      console.log("toggleNav");
       var x = document.getElementById("nav");
       if (x.className === "nav-bar") {
         x.className += " responsive";
